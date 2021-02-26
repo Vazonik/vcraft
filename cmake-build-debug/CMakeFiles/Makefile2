@@ -74,32 +74,128 @@ CMAKE_BINARY_DIR = /home/dawid/dev/vcraft/cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/vcraft.dir/all
+all: lib/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: lib/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/vcraft.dir/clean
+clean: lib/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib
+
+# Recursive "all" directory target.
+lib/all: lib/glfw/all
+lib/all: lib/glm/all
+
+.PHONY : lib/all
+
+# Recursive "preinstall" directory target.
+lib/preinstall: lib/glfw/preinstall
+lib/preinstall: lib/glm/preinstall
+
+.PHONY : lib/preinstall
+
+# Recursive "clean" directory target.
+lib/clean: lib/glfw/clean
+lib/clean: lib/glm/clean
+
+.PHONY : lib/clean
+
+#=============================================================================
+# Directory level rules for directory lib/glfw
+
+# Recursive "all" directory target.
+lib/glfw/all: lib/glfw/src/all
+
+.PHONY : lib/glfw/all
+
+# Recursive "preinstall" directory target.
+lib/glfw/preinstall: lib/glfw/src/preinstall
+
+.PHONY : lib/glfw/preinstall
+
+# Recursive "clean" directory target.
+lib/glfw/clean: lib/glfw/CMakeFiles/uninstall.dir/clean
+lib/glfw/clean: lib/glfw/src/clean
+
+.PHONY : lib/glfw/clean
+
+#=============================================================================
+# Directory level rules for directory lib/glfw/src
+
+# Recursive "all" directory target.
+lib/glfw/src/all: lib/glfw/src/CMakeFiles/glfw.dir/all
+
+.PHONY : lib/glfw/src/all
+
+# Recursive "preinstall" directory target.
+lib/glfw/src/preinstall:
+
+.PHONY : lib/glfw/src/preinstall
+
+# Recursive "clean" directory target.
+lib/glfw/src/clean: lib/glfw/src/CMakeFiles/glfw.dir/clean
+
+.PHONY : lib/glfw/src/clean
+
+#=============================================================================
+# Directory level rules for directory lib/glm
+
+# Recursive "all" directory target.
+lib/glm/all: lib/glm/glm/all
+
+.PHONY : lib/glm/all
+
+# Recursive "preinstall" directory target.
+lib/glm/preinstall: lib/glm/glm/preinstall
+
+.PHONY : lib/glm/preinstall
+
+# Recursive "clean" directory target.
+lib/glm/clean: lib/glm/glm/clean
+
+.PHONY : lib/glm/clean
+
+#=============================================================================
+# Directory level rules for directory lib/glm/glm
+
+# Recursive "all" directory target.
+lib/glm/glm/all:
+
+.PHONY : lib/glm/glm/all
+
+# Recursive "preinstall" directory target.
+lib/glm/glm/preinstall:
+
+.PHONY : lib/glm/glm/preinstall
+
+# Recursive "clean" directory target.
+lib/glm/glm/clean:
+
+.PHONY : lib/glm/glm/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/vcraft.dir
 
 # All Build rule for target.
-CMakeFiles/vcraft.dir/all:
+CMakeFiles/vcraft.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target vcraft"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=18,19,20,21 "Built target vcraft"
 .PHONY : CMakeFiles/vcraft.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/vcraft.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vcraft.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/vcraft.dir/rule
@@ -113,6 +209,60 @@ vcraft: CMakeFiles/vcraft.dir/rule
 CMakeFiles/vcraft.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/clean
 .PHONY : CMakeFiles/vcraft.dir/clean
+
+#=============================================================================
+# Target rules for target lib/glfw/CMakeFiles/uninstall.dir
+
+# All Build rule for target.
+lib/glfw/CMakeFiles/uninstall.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/CMakeFiles/uninstall.dir/build.make lib/glfw/CMakeFiles/uninstall.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/glfw/CMakeFiles/uninstall.dir/build.make lib/glfw/CMakeFiles/uninstall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num= "Built target uninstall"
+.PHONY : lib/glfw/CMakeFiles/uninstall.dir/all
+
+# Build rule for subdir invocation for target.
+lib/glfw/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw/CMakeFiles/uninstall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 0
+.PHONY : lib/glfw/CMakeFiles/uninstall.dir/rule
+
+# Convenience name for target.
+uninstall: lib/glfw/CMakeFiles/uninstall.dir/rule
+
+.PHONY : uninstall
+
+# clean rule for target.
+lib/glfw/CMakeFiles/uninstall.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/CMakeFiles/uninstall.dir/build.make lib/glfw/CMakeFiles/uninstall.dir/clean
+.PHONY : lib/glfw/CMakeFiles/uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target lib/glfw/src/CMakeFiles/glfw.dir
+
+# All Build rule for target.
+lib/glfw/src/CMakeFiles/glfw.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target glfw"
+.PHONY : lib/glfw/src/CMakeFiles/glfw.dir/all
+
+# Build rule for subdir invocation for target.
+lib/glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 17
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/glfw/src/CMakeFiles/glfw.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles 0
+.PHONY : lib/glfw/src/CMakeFiles/glfw.dir/rule
+
+# Convenience name for target.
+glfw: lib/glfw/src/CMakeFiles/glfw.dir/rule
+
+.PHONY : glfw
+
+# clean rule for target.
+lib/glfw/src/CMakeFiles/glfw.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/clean
+.PHONY : lib/glfw/src/CMakeFiles/glfw.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

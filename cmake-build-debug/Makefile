@@ -76,16 +76,51 @@ CMAKE_BINARY_DIR = /home/dawid/dev/vcraft/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -97,6 +132,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/dawid/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -143,6 +189,59 @@ vcraft/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/build
 .PHONY : vcraft/fast
 
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/CMakeFiles/uninstall.dir/build.make lib/glfw/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named glfw
+
+# Build rule for target.
+glfw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glfw
+.PHONY : glfw
+
+# fast build rule for target.
+glfw/fast:
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
+.PHONY : glfw/fast
+
+lib/glad/src/glad.o: lib/glad/src/glad.c.o
+
+.PHONY : lib/glad/src/glad.o
+
+# target to build an object file
+lib/glad/src/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o
+.PHONY : lib/glad/src/glad.c.o
+
+lib/glad/src/glad.i: lib/glad/src/glad.c.i
+
+.PHONY : lib/glad/src/glad.i
+
+# target to preprocess a source file
+lib/glad/src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/lib/glad/src/glad.c.i
+.PHONY : lib/glad/src/glad.c.i
+
+lib/glad/src/glad.s: lib/glad/src/glad.c.s
+
+.PHONY : lib/glad/src/glad.s
+
+# target to generate assembly for a file
+lib/glad/src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/lib/glad/src/glad.c.s
+.PHONY : lib/glad/src/glad.c.s
+
 src/Main.o: src/Main.cpp.o
 
 .PHONY : src/Main.o
@@ -170,59 +269,32 @@ src/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
-src/Test.o: src/Test.cpp.o
+src/graphics/Window.o: src/graphics/Window.cpp.o
 
-.PHONY : src/Test.o
-
-# target to build an object file
-src/Test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/Test.cpp.o
-.PHONY : src/Test.cpp.o
-
-src/Test.i: src/Test.cpp.i
-
-.PHONY : src/Test.i
-
-# target to preprocess a source file
-src/Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/Test.cpp.i
-.PHONY : src/Test.cpp.i
-
-src/Test.s: src/Test.cpp.s
-
-.PHONY : src/Test.s
-
-# target to generate assembly for a file
-src/Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/Test.cpp.s
-.PHONY : src/Test.cpp.s
-
-src/sub/Foo.o: src/sub/Foo.cpp.o
-
-.PHONY : src/sub/Foo.o
+.PHONY : src/graphics/Window.o
 
 # target to build an object file
-src/sub/Foo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o
-.PHONY : src/sub/Foo.cpp.o
+src/graphics/Window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o
+.PHONY : src/graphics/Window.cpp.o
 
-src/sub/Foo.i: src/sub/Foo.cpp.i
+src/graphics/Window.i: src/graphics/Window.cpp.i
 
-.PHONY : src/sub/Foo.i
+.PHONY : src/graphics/Window.i
 
 # target to preprocess a source file
-src/sub/Foo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/sub/Foo.cpp.i
-.PHONY : src/sub/Foo.cpp.i
+src/graphics/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Window.cpp.i
+.PHONY : src/graphics/Window.cpp.i
 
-src/sub/Foo.s: src/sub/Foo.cpp.s
+src/graphics/Window.s: src/graphics/Window.cpp.s
 
-.PHONY : src/sub/Foo.s
+.PHONY : src/graphics/Window.s
 
 # target to generate assembly for a file
-src/sub/Foo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/sub/Foo.cpp.s
-.PHONY : src/sub/Foo.cpp.s
+src/graphics/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Window.cpp.s
+.PHONY : src/graphics/Window.cpp.s
 
 # Help Target
 help:
@@ -231,17 +303,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... uninstall"
+	@echo "... glfw"
 	@echo "... vcraft"
+	@echo "... lib/glad/src/glad.o"
+	@echo "... lib/glad/src/glad.i"
+	@echo "... lib/glad/src/glad.s"
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
-	@echo "... src/Test.o"
-	@echo "... src/Test.i"
-	@echo "... src/Test.s"
-	@echo "... src/sub/Foo.o"
-	@echo "... src/sub/Foo.i"
-	@echo "... src/sub/Foo.s"
+	@echo "... src/graphics/Window.o"
+	@echo "... src/graphics/Window.i"
+	@echo "... src/graphics/Window.s"
 .PHONY : help
 
 

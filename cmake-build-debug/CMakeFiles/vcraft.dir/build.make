@@ -77,9 +77,35 @@ include CMakeFiles/vcraft.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/vcraft.dir/flags.make
 
+CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o: CMakeFiles/vcraft.dir/flags.make
+CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o: ../src/graphics/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o -c /home/dawid/dev/vcraft/src/graphics/Window.cpp
+
+CMakeFiles/vcraft.dir/src/graphics/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vcraft.dir/src/graphics/Window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/dev/vcraft/src/graphics/Window.cpp > CMakeFiles/vcraft.dir/src/graphics/Window.cpp.i
+
+CMakeFiles/vcraft.dir/src/graphics/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/graphics/Window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/graphics/Window.cpp -o CMakeFiles/vcraft.dir/src/graphics/Window.cpp.s
+
+CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o: CMakeFiles/vcraft.dir/flags.make
+CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o: ../lib/glad/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o   -c /home/dawid/dev/vcraft/lib/glad/src/glad.c
+
+CMakeFiles/vcraft.dir/lib/glad/src/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/vcraft.dir/lib/glad/src/glad.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dawid/dev/vcraft/lib/glad/src/glad.c > CMakeFiles/vcraft.dir/lib/glad/src/glad.c.i
+
+CMakeFiles/vcraft.dir/lib/glad/src/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/vcraft.dir/lib/glad/src/glad.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dawid/dev/vcraft/lib/glad/src/glad.c -o CMakeFiles/vcraft.dir/lib/glad/src/glad.c.s
+
 CMakeFiles/vcraft.dir/src/Main.cpp.o: CMakeFiles/vcraft.dir/flags.make
 CMakeFiles/vcraft.dir/src/Main.cpp.o: ../src/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vcraft.dir/src/Main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vcraft.dir/src/Main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/Main.cpp.o -c /home/dawid/dev/vcraft/src/Main.cpp
 
 CMakeFiles/vcraft.dir/src/Main.cpp.i: cmake_force
@@ -90,51 +116,28 @@ CMakeFiles/vcraft.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/Main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/Main.cpp -o CMakeFiles/vcraft.dir/src/Main.cpp.s
 
-CMakeFiles/vcraft.dir/src/Test.cpp.o: CMakeFiles/vcraft.dir/flags.make
-CMakeFiles/vcraft.dir/src/Test.cpp.o: ../src/Test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vcraft.dir/src/Test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/Test.cpp.o -c /home/dawid/dev/vcraft/src/Test.cpp
-
-CMakeFiles/vcraft.dir/src/Test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vcraft.dir/src/Test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/dev/vcraft/src/Test.cpp > CMakeFiles/vcraft.dir/src/Test.cpp.i
-
-CMakeFiles/vcraft.dir/src/Test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/Test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/Test.cpp -o CMakeFiles/vcraft.dir/src/Test.cpp.s
-
-CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o: CMakeFiles/vcraft.dir/flags.make
-CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o: ../src/sub/Foo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o -c /home/dawid/dev/vcraft/src/sub/Foo.cpp
-
-CMakeFiles/vcraft.dir/src/sub/Foo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vcraft.dir/src/sub/Foo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/dev/vcraft/src/sub/Foo.cpp > CMakeFiles/vcraft.dir/src/sub/Foo.cpp.i
-
-CMakeFiles/vcraft.dir/src/sub/Foo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/sub/Foo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/sub/Foo.cpp -o CMakeFiles/vcraft.dir/src/sub/Foo.cpp.s
-
 # Object files for target vcraft
 vcraft_OBJECTS = \
-"CMakeFiles/vcraft.dir/src/Main.cpp.o" \
-"CMakeFiles/vcraft.dir/src/Test.cpp.o" \
-"CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o"
+"CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o" \
+"CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o" \
+"CMakeFiles/vcraft.dir/src/Main.cpp.o"
 
 # External object files for target vcraft
 vcraft_EXTERNAL_OBJECTS =
 
-vcraft: CMakeFiles/vcraft.dir/src/Main.cpp.o
-vcraft: CMakeFiles/vcraft.dir/src/Test.cpp.o
-vcraft: CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o
-vcraft: CMakeFiles/vcraft.dir/build.make
-vcraft: CMakeFiles/vcraft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable vcraft"
+../build/vcraft: CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o
+../build/vcraft: CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o
+../build/vcraft: CMakeFiles/vcraft.dir/src/Main.cpp.o
+../build/vcraft: CMakeFiles/vcraft.dir/build.make
+../build/vcraft: lib/glfw/src/libglfw3.a
+../build/vcraft: /usr/lib/x86_64-linux-gnu/librt.so
+../build/vcraft: /usr/lib/x86_64-linux-gnu/libm.so
+../build/vcraft: CMakeFiles/vcraft.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../build/vcraft"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vcraft.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/vcraft.dir/build: vcraft
+CMakeFiles/vcraft.dir/build: ../build/vcraft
 
 .PHONY : CMakeFiles/vcraft.dir/build
 
