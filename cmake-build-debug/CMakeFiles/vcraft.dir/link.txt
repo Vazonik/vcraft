@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/vcraft.dir/src/Main.cpp.o CMakeFiles/vcraft.dir/src/Test.cpp.o CMakeFiles/vcraft.dir/src/sub/Foo.cpp.o  -o vcraft 

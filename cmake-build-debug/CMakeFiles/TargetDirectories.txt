@@ -1,0 +1,3 @@
+/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Test.h
+
+../include/sub/Foo.h
+
+/home/dawid/dev/vcraft/src/Main.cpp
+iostream
+-
+Test.h
+/home/dawid/dev/vcraft/src/Test.h
+sub/Foo.h
+/home/dawid/dev/vcraft/src/sub/Foo.h
+
+/home/dawid/dev/vcraft/src/sub/Foo.cpp
+sub/Foo.h
+/home/dawid/dev/vcraft/src/sub/sub/Foo.h
+iostream
+-
+
