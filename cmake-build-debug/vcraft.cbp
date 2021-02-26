@@ -201,6 +201,9 @@
 		<Unit filename="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src/glfw_config.h">
 			<Option target="glfw"/>
 		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/Engine.h">
+			<Option target="vcraft"/>
+		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Window.h">
 			<Option target="vcraft"/>
 		</Unit>
@@ -295,9 +298,6 @@
 			<Option target="glfw"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/Engine.cpp">
-			<Option target="vcraft"/>
-		</Unit>
-		<Unit filename="/home/dawid/dev/vcraft/src/Engine.h">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/Main.cpp">
