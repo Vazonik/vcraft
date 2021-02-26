@@ -54,9 +54,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
-					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
@@ -80,9 +80,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
-					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
@@ -147,9 +147,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
-					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>
@@ -176,9 +176,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
-					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>
@@ -293,6 +293,12 @@
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/lib/glfw/src/xkb_unicode.h">
 			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/Engine.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/Engine.h">
+			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/Main.cpp">
 			<Option target="vcraft"/>

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o CMakeFiles/vcraft.dir/src/Main.cpp.o  -o ../build/vcraft  lib/glfw/src/libglfw3.a -lpthread /usr/lib/x86_64-linux-gnu/librt.so -lm -ldl 
+/usr/bin/c++  -g   CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o CMakeFiles/vcraft.dir/src/Main.cpp.o CMakeFiles/vcraft.dir/src/Engine.cpp.o  -o ../build/vcraft  lib/glfw/src/libglfw3.a -lpthread /usr/lib/x86_64-linux-gnu/librt.so -lm -ldl 

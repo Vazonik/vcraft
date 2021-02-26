@@ -35,9 +35,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
-					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>
@@ -64,9 +64,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
-					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>

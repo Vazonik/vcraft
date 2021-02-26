@@ -28,7 +28,6 @@ packages.config
 /ltmain.sh
 /missing
 /libtool
-/.libs/
 .deps/
 *.[oa]
 *.l[oa]

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../build/vcraft"
   "../build/vcraft.pdb"
   "CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o"
+  "CMakeFiles/vcraft.dir/src/Engine.cpp.o"
   "CMakeFiles/vcraft.dir/src/Main.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o"
 )
