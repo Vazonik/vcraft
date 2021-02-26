@@ -5,7 +5,7 @@
 		<Option title="vcraft"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\glfw\;CMake Files\lib\glfw\CMake\;CMake Files\lib\glfw\src\;CMake Files\lib\glm\;CMake Files\lib\glm\glm\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\glfw\;CMake Files\lib\glfw\CMake\;CMake Files\lib\glfw\src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/dawid/dev/vcraft/cmake-build-debug"/>
@@ -55,9 +55,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
-					<Add directory="/home/dawid/dev/vcraft/lib/glm/glm/.."/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -81,9 +81,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
-					<Add directory="/home/dawid/dev/vcraft/lib/glm/glm/.."/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -148,6 +148,7 @@
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
@@ -176,6 +177,7 @@
 				<Compiler>
 					<Add option="-D_GLFW_USE_CONFIG_H"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
@@ -321,12 +323,6 @@
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/lib/glfw/src/glfw_config.h.in">
 			<Option virtualFolder="CMake Files\lib\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/dawid/dev/vcraft/lib/glm/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\glm\"/>
-		</Unit>
-		<Unit filename="/home/dawid/dev/vcraft/lib/glm/glm/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\lib\glm\glm\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

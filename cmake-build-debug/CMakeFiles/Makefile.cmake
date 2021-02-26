@@ -57,8 +57,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../lib/glfw/CMakeLists.txt"
   "../lib/glfw/src/CMakeLists.txt"
   "../lib/glfw/src/glfw_config.h.in"
-  "../lib/glm/CMakeLists.txt"
-  "../lib/glm/glm/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -73,8 +71,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/glm/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

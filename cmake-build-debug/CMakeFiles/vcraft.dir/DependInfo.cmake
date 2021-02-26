@@ -12,9 +12,9 @@ set(CMAKE_C_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../lib/glad/include"
+  "../lib/glm/include"
   "../include"
   "../lib/glfw/include"
-  "../lib/glm/glm/.."
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/dev/vcraft/src/Main.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/Main.cpp.o"
@@ -25,9 +25,9 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../lib/glad/include"
+  "../lib/glm/include"
   "../include"
   "../lib/glfw/include"
-  "../lib/glm/glm/.."
   )
 
 # Targets to which this target links.

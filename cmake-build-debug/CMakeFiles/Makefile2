@@ -94,19 +94,16 @@ clean: lib/clean
 
 # Recursive "all" directory target.
 lib/all: lib/glfw/all
-lib/all: lib/glm/all
 
 .PHONY : lib/all
 
 # Recursive "preinstall" directory target.
 lib/preinstall: lib/glfw/preinstall
-lib/preinstall: lib/glm/preinstall
 
 .PHONY : lib/preinstall
 
 # Recursive "clean" directory target.
 lib/clean: lib/glfw/clean
-lib/clean: lib/glm/clean
 
 .PHONY : lib/clean
 
@@ -146,42 +143,6 @@ lib/glfw/src/preinstall:
 lib/glfw/src/clean: lib/glfw/src/CMakeFiles/glfw.dir/clean
 
 .PHONY : lib/glfw/src/clean
-
-#=============================================================================
-# Directory level rules for directory lib/glm
-
-# Recursive "all" directory target.
-lib/glm/all: lib/glm/glm/all
-
-.PHONY : lib/glm/all
-
-# Recursive "preinstall" directory target.
-lib/glm/preinstall: lib/glm/glm/preinstall
-
-.PHONY : lib/glm/preinstall
-
-# Recursive "clean" directory target.
-lib/glm/clean: lib/glm/glm/clean
-
-.PHONY : lib/glm/clean
-
-#=============================================================================
-# Directory level rules for directory lib/glm/glm
-
-# Recursive "all" directory target.
-lib/glm/glm/all:
-
-.PHONY : lib/glm/glm/all
-
-# Recursive "preinstall" directory target.
-lib/glm/glm/preinstall:
-
-.PHONY : lib/glm/glm/preinstall
-
-# Recursive "clean" directory target.
-lib/glm/glm/clean:
-
-.PHONY : lib/glm/glm/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/vcraft.dir

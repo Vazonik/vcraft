@@ -68,6 +68,14 @@ GL/gl.h
 GL/glext.h
 -
 
+/home/dawid/dev/vcraft/src/Main.cpp
+glad/glad.h
+-
+GLFW/glfw3.h
+-
+iostream
+-
+
 /home/dawid/dev/vcraft/src/graphics/Window.cpp
 graphics/Window.h
 /home/dawid/dev/vcraft/src/graphics/graphics/Window.h
