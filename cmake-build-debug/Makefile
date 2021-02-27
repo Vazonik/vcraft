@@ -377,6 +377,60 @@ src/graphics/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.s
 .PHONY : src/graphics/Shader.cpp.s
 
+src/graphics/Vao.o: src/graphics/Vao.cpp.o
+
+.PHONY : src/graphics/Vao.o
+
+# target to build an object file
+src/graphics/Vao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.o
+.PHONY : src/graphics/Vao.cpp.o
+
+src/graphics/Vao.i: src/graphics/Vao.cpp.i
+
+.PHONY : src/graphics/Vao.i
+
+# target to preprocess a source file
+src/graphics/Vao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.i
+.PHONY : src/graphics/Vao.cpp.i
+
+src/graphics/Vao.s: src/graphics/Vao.cpp.s
+
+.PHONY : src/graphics/Vao.s
+
+# target to generate assembly for a file
+src/graphics/Vao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.s
+.PHONY : src/graphics/Vao.cpp.s
+
+src/graphics/Vbo.o: src/graphics/Vbo.cpp.o
+
+.PHONY : src/graphics/Vbo.o
+
+# target to build an object file
+src/graphics/Vbo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.o
+.PHONY : src/graphics/Vbo.cpp.o
+
+src/graphics/Vbo.i: src/graphics/Vbo.cpp.i
+
+.PHONY : src/graphics/Vbo.i
+
+# target to preprocess a source file
+src/graphics/Vbo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.i
+.PHONY : src/graphics/Vbo.cpp.i
+
+src/graphics/Vbo.s: src/graphics/Vbo.cpp.s
+
+.PHONY : src/graphics/Vbo.s
+
+# target to generate assembly for a file
+src/graphics/Vbo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.s
+.PHONY : src/graphics/Vbo.cpp.s
+
 src/graphics/Window.o: src/graphics/Window.cpp.o
 
 .PHONY : src/graphics/Window.o
@@ -437,6 +491,12 @@ help:
 	@echo "... src/graphics/Shader.o"
 	@echo "... src/graphics/Shader.i"
 	@echo "... src/graphics/Shader.s"
+	@echo "... src/graphics/Vao.o"
+	@echo "... src/graphics/Vao.i"
+	@echo "... src/graphics/Vao.s"
+	@echo "... src/graphics/Vbo.o"
+	@echo "... src/graphics/Vbo.i"
+	@echo "... src/graphics/Vbo.s"
 	@echo "... src/graphics/Window.o"
 	@echo "... src/graphics/Window.i"
 	@echo "... src/graphics/Window.s"

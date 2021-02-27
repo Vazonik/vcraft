@@ -213,6 +213,12 @@
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Shader.h">
 			<Option target="vcraft"/>
 		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Vao.h">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Vbo.h">
+			<Option target="vcraft"/>
+		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Window.h">
 			<Option target="vcraft"/>
 		</Unit>
@@ -322,6 +328,12 @@
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Shader.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Vao.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Vbo.cpp">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Window.cpp">
