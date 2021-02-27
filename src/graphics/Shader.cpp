@@ -4,7 +4,18 @@
 #include <fstream>
 #include <sstream>
 
-vc::Shader::Shader(char *vsPath, char *fsPath, size_t n, vc::Shader::VertexAttr *attributes) {
+#include "graphics/Window.h"
+
+vc::Shader::Shader() = default;
+vc::Shader::~Shader() {
+    destroy();
+}
+
+void vc::Shader::create(const std::string &vsPath, const std::string &fsPath, size_t n, vc::Shader::VertexAttr *attributes) {
+    if(!vc::Window::getInstance()->isGladInitialised()) {
+        throw std::runtime_error("[ERROR] Building a shader before glad initialization is not allowed.");
+    }
+
     vsHandle = compile(vsPath, Type::vertex);
     fsHandle = compile(fsPath, Type::fragment);
     handle = glCreateProgram();
@@ -23,12 +34,12 @@ vc::Shader::Shader(char *vsPath, char *fsPath, size_t n, vc::Shader::VertexAttr 
 
     if (linked == 0) {
         char buf[512];
-        snprintf(buf, 512, "[%s, %s]", vsPath, fsPath);
+        snprintf(buf, 512, "[%s, %s]", vsPath.c_str(), fsPath.c_str());
         std::cout << "[Error] Linking shader at " << buf << " failed." << std::endl;
     }
 }
 
-GLuint vc::Shader::compile(char* path, vc::Shader::Type type) {
+GLuint vc::Shader::compile(const std::string &path, vc::Shader::Type type) {
     std::string strCode;
     std::ifstream file;
 
@@ -45,25 +56,25 @@ GLuint vc::Shader::compile(char* path, vc::Shader::Type type) {
     }
 
     const char *code = strCode.c_str();
-    GLuint handle;
+    GLuint h;
 
     switch(type) {
         case Type::vertex:
-            handle = glCreateShader(GL_VERTEX_SHADER);
+            h = glCreateShader(GL_VERTEX_SHADER);
             break;
         case Type::fragment:
-            handle = glCreateShader(GL_FRAGMENT_SHADER);
+            h = glCreateShader(GL_FRAGMENT_SHADER);
             break;
     }
 
-    glShaderSource(handle, 1, &code, nullptr);
-    glCompileShader(handle);
-    checkCompileErrors(handle, path, type);
+    glShaderSource(h, 1, &code, nullptr);
+    glCompileShader(h);
+    checkCompileErrors(h, path, type);
 
-    return handle;
+    return h;
 }
 
-void vc::Shader::checkCompileErrors(GLint shader, char *path, vc::Shader::Type type) {
+void vc::Shader::checkCompileErrors(GLint shader, const std::string &path, vc::Shader::Type type) {
     int success;
     char infoLog[1024];
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);

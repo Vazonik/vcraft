@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../include/Engine.h
+graphics/Shader.h
+../include/graphics/Shader.h
+
 ../include/graphics/Shader.h
 glad/glad.h
 -
@@ -13,6 +17,16 @@ iostream
 -
 utilities/viewproj.h
 ../include/graphics/utilities/viewproj.h
+
+../include/graphics/Window.h
+Engine.h
+../include/graphics/Engine.h
+glad/glad.h
+-
+GLFW/glfw3.h
+-
+glm/vec2.hpp
+-
 
 ../include/utilities/viewproj.h
 glm/glm.hpp
@@ -28,6 +42,50 @@ stdint.h
 
 ../lib/glad/include/glad/glad.h
 KHR/khrplatform.h
+-
+
+../lib/glfw/include/GLFW/glfw3.h
+stddef.h
+-
+stdint.h
+-
+vulkan/vulkan.h
+-
+GLES/gl.h
+-
+GLES/glext.h
+-
+GLES2/gl2.h
+-
+GLES2/gl2ext.h
+-
+GLES3/gl3.h
+-
+GLES2/gl2ext.h
+-
+GLES3/gl31.h
+-
+GLES2/gl2ext.h
+-
+GLES3/gl32.h
+-
+GLES2/gl2ext.h
+-
+OpenGL/gl3.h
+-
+OpenGL/gl3ext.h
+-
+GL/glcorearb.h
+-
+OpenGL/glu.h
+-
+GL/glu.h
+-
+OpenGL/gl.h
+-
+GL/gl.h
+-
+GL/glext.h
 -
 
 ../lib/glm/include/glm/common.hpp
@@ -1038,13 +1096,11 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 ../lib/glm/include/glm/detail/func_vector_relational.inl
 
-/home/dawid/dev/vcraft/src/graphics/Shader.cpp
-graphics/Shader.h
--
-cstdio
--
-fstream
--
-sstream
+/home/dawid/dev/vcraft/src/Engine.cpp
+Engine.h
+/home/dawid/dev/vcraft/src/Engine.h
+graphics/Window.h
+/home/dawid/dev/vcraft/src/graphics/Window.h
+iostream
 -
 

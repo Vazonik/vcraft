@@ -4,7 +4,7 @@
 
 namespace vc {
     Window *Window::instance = nullptr;
-    Window::Window() = default;
+    Window::Window() : gladInitialised(false) {};
 
     Window *Window::create(int width, int height, const char *title, Engine *engine) {
         instance = new Window();
@@ -30,8 +30,9 @@ namespace vc {
 
         glfwSetFramebufferSizeCallback(instance->handler, Window::framebufferSizeCallback);
 
-        if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-        {
+        if (gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+            instance->gladInitialised = true;
+        } else {
             std::cout << "Failed to initialize GLAD" << std::endl;
             instance->destroy();
             return nullptr;
@@ -57,6 +58,7 @@ namespace vc {
 
     void Window::destroy() {
         this->_engine->destroy();
+        this->gladInitialised = false;
         glfwTerminate();
         delete instance;
     }
@@ -69,6 +71,10 @@ namespace vc {
 
     glm::i32vec2 Window::getSize() {
         return size;
+    }
+
+    bool Window::isGladInitialised() const {
+        return gladInitialised;
     }
 
 

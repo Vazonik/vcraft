@@ -23,10 +23,12 @@ namespace vc
         void destroy();
         GLFWwindow *getHandler();
         glm::i32vec2 getSize();
+        bool isGladInitialised() const;
     private:
         Engine *_engine{};
         GLFWwindow *handler{};
         glm::i32vec2 size{};
+        bool gladInitialised;
     private:
         static void framebufferSizeCallback(GLFWwindow *windowHandler, int width, int height);
     };

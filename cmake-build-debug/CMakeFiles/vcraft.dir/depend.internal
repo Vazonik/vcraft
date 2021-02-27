@@ -7,65 +7,328 @@ CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o
  /home/dawid/dev/vcraft/lib/glad/src/glad.c
 CMakeFiles/vcraft.dir/src/Engine.cpp.o
  ../include/Engine.h
+ ../include/graphics/Shader.h
  ../include/graphics/Window.h
+ ../include/utilities/viewproj.h
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../lib/glfw/include/GLFW/glfw3.h
+ ../lib/glm/include/glm/common.hpp
+ ../lib/glm/include/glm/detail/_fixes.hpp
  ../lib/glm/include/glm/detail/_swizzle.hpp
  ../lib/glm/include/glm/detail/_swizzle_func.hpp
+ ../lib/glm/include/glm/detail/_vectorize.hpp
+ ../lib/glm/include/glm/detail/compute_common.hpp
  ../lib/glm/include/glm/detail/compute_vector_relational.hpp
+ ../lib/glm/include/glm/detail/func_common.inl
+ ../lib/glm/include/glm/detail/func_common_simd.inl
+ ../lib/glm/include/glm/detail/func_exponential.inl
+ ../lib/glm/include/glm/detail/func_exponential_simd.inl
+ ../lib/glm/include/glm/detail/func_geometric.inl
+ ../lib/glm/include/glm/detail/func_geometric_simd.inl
+ ../lib/glm/include/glm/detail/func_integer.inl
+ ../lib/glm/include/glm/detail/func_integer_simd.inl
+ ../lib/glm/include/glm/detail/func_matrix.inl
+ ../lib/glm/include/glm/detail/func_matrix_simd.inl
+ ../lib/glm/include/glm/detail/func_packing.inl
+ ../lib/glm/include/glm/detail/func_packing_simd.inl
+ ../lib/glm/include/glm/detail/func_trigonometric.inl
+ ../lib/glm/include/glm/detail/func_trigonometric_simd.inl
+ ../lib/glm/include/glm/detail/func_vector_relational.inl
+ ../lib/glm/include/glm/detail/func_vector_relational_simd.inl
  ../lib/glm/include/glm/detail/qualifier.hpp
  ../lib/glm/include/glm/detail/setup.hpp
+ ../lib/glm/include/glm/detail/type_half.hpp
+ ../lib/glm/include/glm/detail/type_half.inl
+ ../lib/glm/include/glm/detail/type_mat2x2.hpp
+ ../lib/glm/include/glm/detail/type_mat2x2.inl
+ ../lib/glm/include/glm/detail/type_mat2x3.hpp
+ ../lib/glm/include/glm/detail/type_mat2x3.inl
+ ../lib/glm/include/glm/detail/type_mat2x4.hpp
+ ../lib/glm/include/glm/detail/type_mat2x4.inl
+ ../lib/glm/include/glm/detail/type_mat3x2.hpp
+ ../lib/glm/include/glm/detail/type_mat3x2.inl
+ ../lib/glm/include/glm/detail/type_mat3x3.hpp
+ ../lib/glm/include/glm/detail/type_mat3x3.inl
+ ../lib/glm/include/glm/detail/type_mat3x4.hpp
+ ../lib/glm/include/glm/detail/type_mat3x4.inl
+ ../lib/glm/include/glm/detail/type_mat4x2.hpp
+ ../lib/glm/include/glm/detail/type_mat4x2.inl
+ ../lib/glm/include/glm/detail/type_mat4x3.hpp
+ ../lib/glm/include/glm/detail/type_mat4x3.inl
+ ../lib/glm/include/glm/detail/type_mat4x4.hpp
+ ../lib/glm/include/glm/detail/type_mat4x4.inl
+ ../lib/glm/include/glm/detail/type_mat4x4_simd.inl
+ ../lib/glm/include/glm/detail/type_vec1.hpp
+ ../lib/glm/include/glm/detail/type_vec1.inl
  ../lib/glm/include/glm/detail/type_vec2.hpp
  ../lib/glm/include/glm/detail/type_vec2.inl
+ ../lib/glm/include/glm/detail/type_vec3.hpp
+ ../lib/glm/include/glm/detail/type_vec3.inl
+ ../lib/glm/include/glm/detail/type_vec4.hpp
+ ../lib/glm/include/glm/detail/type_vec4.inl
+ ../lib/glm/include/glm/detail/type_vec4_simd.inl
+ ../lib/glm/include/glm/exponential.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x4_precision.hpp
  ../lib/glm/include/glm/ext/scalar_int_sized.hpp
  ../lib/glm/include/glm/ext/scalar_uint_sized.hpp
  ../lib/glm/include/glm/ext/vector_bool2.hpp
  ../lib/glm/include/glm/ext/vector_bool2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_bool3.hpp
+ ../lib/glm/include/glm/ext/vector_bool3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_bool4.hpp
+ ../lib/glm/include/glm/ext/vector_bool4_precision.hpp
  ../lib/glm/include/glm/ext/vector_double2.hpp
  ../lib/glm/include/glm/ext/vector_double2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_double3.hpp
+ ../lib/glm/include/glm/ext/vector_double3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_double4.hpp
+ ../lib/glm/include/glm/ext/vector_double4_precision.hpp
  ../lib/glm/include/glm/ext/vector_float2.hpp
  ../lib/glm/include/glm/ext/vector_float2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_float3.hpp
+ ../lib/glm/include/glm/ext/vector_float3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_float4.hpp
+ ../lib/glm/include/glm/ext/vector_float4_precision.hpp
  ../lib/glm/include/glm/ext/vector_int2.hpp
  ../lib/glm/include/glm/ext/vector_int2_sized.hpp
+ ../lib/glm/include/glm/ext/vector_int3.hpp
+ ../lib/glm/include/glm/ext/vector_int3_sized.hpp
+ ../lib/glm/include/glm/ext/vector_int4.hpp
+ ../lib/glm/include/glm/ext/vector_int4_sized.hpp
  ../lib/glm/include/glm/ext/vector_uint2.hpp
  ../lib/glm/include/glm/ext/vector_uint2_sized.hpp
+ ../lib/glm/include/glm/ext/vector_uint3.hpp
+ ../lib/glm/include/glm/ext/vector_uint3_sized.hpp
+ ../lib/glm/include/glm/ext/vector_uint4.hpp
+ ../lib/glm/include/glm/ext/vector_uint4_sized.hpp
+ ../lib/glm/include/glm/fwd.hpp
+ ../lib/glm/include/glm/geometric.hpp
+ ../lib/glm/include/glm/glm.hpp
+ ../lib/glm/include/glm/integer.hpp
+ ../lib/glm/include/glm/mat2x2.hpp
+ ../lib/glm/include/glm/mat2x3.hpp
+ ../lib/glm/include/glm/mat2x4.hpp
+ ../lib/glm/include/glm/mat3x2.hpp
+ ../lib/glm/include/glm/mat3x3.hpp
+ ../lib/glm/include/glm/mat3x4.hpp
+ ../lib/glm/include/glm/mat4x2.hpp
+ ../lib/glm/include/glm/mat4x3.hpp
+ ../lib/glm/include/glm/mat4x4.hpp
+ ../lib/glm/include/glm/matrix.hpp
+ ../lib/glm/include/glm/packing.hpp
+ ../lib/glm/include/glm/simd/common.h
+ ../lib/glm/include/glm/simd/exponential.h
+ ../lib/glm/include/glm/simd/geometric.h
+ ../lib/glm/include/glm/simd/integer.h
+ ../lib/glm/include/glm/simd/matrix.h
  ../lib/glm/include/glm/simd/neon.h
  ../lib/glm/include/glm/simd/platform.h
+ ../lib/glm/include/glm/trigonometric.hpp
  ../lib/glm/include/glm/vec2.hpp
+ ../lib/glm/include/glm/vec3.hpp
+ ../lib/glm/include/glm/vec4.hpp
+ ../lib/glm/include/glm/vector_relational.hpp
  /home/dawid/dev/vcraft/src/Engine.cpp
 CMakeFiles/vcraft.dir/src/Main.cpp.o
  ../include/Engine.h
+ ../include/graphics/Shader.h
  ../include/graphics/Window.h
+ ../include/utilities/viewproj.h
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../lib/glfw/include/GLFW/glfw3.h
+ ../lib/glm/include/glm/common.hpp
+ ../lib/glm/include/glm/detail/_fixes.hpp
  ../lib/glm/include/glm/detail/_swizzle.hpp
  ../lib/glm/include/glm/detail/_swizzle_func.hpp
+ ../lib/glm/include/glm/detail/_vectorize.hpp
+ ../lib/glm/include/glm/detail/compute_common.hpp
  ../lib/glm/include/glm/detail/compute_vector_relational.hpp
+ ../lib/glm/include/glm/detail/func_common.inl
+ ../lib/glm/include/glm/detail/func_common_simd.inl
+ ../lib/glm/include/glm/detail/func_exponential.inl
+ ../lib/glm/include/glm/detail/func_exponential_simd.inl
+ ../lib/glm/include/glm/detail/func_geometric.inl
+ ../lib/glm/include/glm/detail/func_geometric_simd.inl
+ ../lib/glm/include/glm/detail/func_integer.inl
+ ../lib/glm/include/glm/detail/func_integer_simd.inl
+ ../lib/glm/include/glm/detail/func_matrix.inl
+ ../lib/glm/include/glm/detail/func_matrix_simd.inl
+ ../lib/glm/include/glm/detail/func_packing.inl
+ ../lib/glm/include/glm/detail/func_packing_simd.inl
+ ../lib/glm/include/glm/detail/func_trigonometric.inl
+ ../lib/glm/include/glm/detail/func_trigonometric_simd.inl
+ ../lib/glm/include/glm/detail/func_vector_relational.inl
+ ../lib/glm/include/glm/detail/func_vector_relational_simd.inl
  ../lib/glm/include/glm/detail/qualifier.hpp
  ../lib/glm/include/glm/detail/setup.hpp
+ ../lib/glm/include/glm/detail/type_half.hpp
+ ../lib/glm/include/glm/detail/type_half.inl
+ ../lib/glm/include/glm/detail/type_mat2x2.hpp
+ ../lib/glm/include/glm/detail/type_mat2x2.inl
+ ../lib/glm/include/glm/detail/type_mat2x3.hpp
+ ../lib/glm/include/glm/detail/type_mat2x3.inl
+ ../lib/glm/include/glm/detail/type_mat2x4.hpp
+ ../lib/glm/include/glm/detail/type_mat2x4.inl
+ ../lib/glm/include/glm/detail/type_mat3x2.hpp
+ ../lib/glm/include/glm/detail/type_mat3x2.inl
+ ../lib/glm/include/glm/detail/type_mat3x3.hpp
+ ../lib/glm/include/glm/detail/type_mat3x3.inl
+ ../lib/glm/include/glm/detail/type_mat3x4.hpp
+ ../lib/glm/include/glm/detail/type_mat3x4.inl
+ ../lib/glm/include/glm/detail/type_mat4x2.hpp
+ ../lib/glm/include/glm/detail/type_mat4x2.inl
+ ../lib/glm/include/glm/detail/type_mat4x3.hpp
+ ../lib/glm/include/glm/detail/type_mat4x3.inl
+ ../lib/glm/include/glm/detail/type_mat4x4.hpp
+ ../lib/glm/include/glm/detail/type_mat4x4.inl
+ ../lib/glm/include/glm/detail/type_mat4x4_simd.inl
+ ../lib/glm/include/glm/detail/type_vec1.hpp
+ ../lib/glm/include/glm/detail/type_vec1.inl
  ../lib/glm/include/glm/detail/type_vec2.hpp
  ../lib/glm/include/glm/detail/type_vec2.inl
+ ../lib/glm/include/glm/detail/type_vec3.hpp
+ ../lib/glm/include/glm/detail/type_vec3.inl
+ ../lib/glm/include/glm/detail/type_vec4.hpp
+ ../lib/glm/include/glm/detail/type_vec4.inl
+ ../lib/glm/include/glm/detail/type_vec4_simd.inl
+ ../lib/glm/include/glm/exponential.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x4_precision.hpp
  ../lib/glm/include/glm/ext/scalar_int_sized.hpp
  ../lib/glm/include/glm/ext/scalar_uint_sized.hpp
  ../lib/glm/include/glm/ext/vector_bool2.hpp
  ../lib/glm/include/glm/ext/vector_bool2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_bool3.hpp
+ ../lib/glm/include/glm/ext/vector_bool3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_bool4.hpp
+ ../lib/glm/include/glm/ext/vector_bool4_precision.hpp
  ../lib/glm/include/glm/ext/vector_double2.hpp
  ../lib/glm/include/glm/ext/vector_double2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_double3.hpp
+ ../lib/glm/include/glm/ext/vector_double3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_double4.hpp
+ ../lib/glm/include/glm/ext/vector_double4_precision.hpp
  ../lib/glm/include/glm/ext/vector_float2.hpp
  ../lib/glm/include/glm/ext/vector_float2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_float3.hpp
+ ../lib/glm/include/glm/ext/vector_float3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_float4.hpp
+ ../lib/glm/include/glm/ext/vector_float4_precision.hpp
  ../lib/glm/include/glm/ext/vector_int2.hpp
  ../lib/glm/include/glm/ext/vector_int2_sized.hpp
+ ../lib/glm/include/glm/ext/vector_int3.hpp
+ ../lib/glm/include/glm/ext/vector_int3_sized.hpp
+ ../lib/glm/include/glm/ext/vector_int4.hpp
+ ../lib/glm/include/glm/ext/vector_int4_sized.hpp
  ../lib/glm/include/glm/ext/vector_uint2.hpp
  ../lib/glm/include/glm/ext/vector_uint2_sized.hpp
+ ../lib/glm/include/glm/ext/vector_uint3.hpp
+ ../lib/glm/include/glm/ext/vector_uint3_sized.hpp
+ ../lib/glm/include/glm/ext/vector_uint4.hpp
+ ../lib/glm/include/glm/ext/vector_uint4_sized.hpp
+ ../lib/glm/include/glm/fwd.hpp
+ ../lib/glm/include/glm/geometric.hpp
+ ../lib/glm/include/glm/glm.hpp
+ ../lib/glm/include/glm/integer.hpp
+ ../lib/glm/include/glm/mat2x2.hpp
+ ../lib/glm/include/glm/mat2x3.hpp
+ ../lib/glm/include/glm/mat2x4.hpp
+ ../lib/glm/include/glm/mat3x2.hpp
+ ../lib/glm/include/glm/mat3x3.hpp
+ ../lib/glm/include/glm/mat3x4.hpp
+ ../lib/glm/include/glm/mat4x2.hpp
+ ../lib/glm/include/glm/mat4x3.hpp
+ ../lib/glm/include/glm/mat4x4.hpp
+ ../lib/glm/include/glm/matrix.hpp
+ ../lib/glm/include/glm/packing.hpp
+ ../lib/glm/include/glm/simd/common.h
+ ../lib/glm/include/glm/simd/exponential.h
+ ../lib/glm/include/glm/simd/geometric.h
+ ../lib/glm/include/glm/simd/integer.h
+ ../lib/glm/include/glm/simd/matrix.h
  ../lib/glm/include/glm/simd/neon.h
  ../lib/glm/include/glm/simd/platform.h
+ ../lib/glm/include/glm/trigonometric.hpp
  ../lib/glm/include/glm/vec2.hpp
+ ../lib/glm/include/glm/vec3.hpp
+ ../lib/glm/include/glm/vec4.hpp
+ ../lib/glm/include/glm/vector_relational.hpp
  /home/dawid/dev/vcraft/src/Main.cpp
 CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o
  ../include/Engine.h
  ../include/graphics/Camera.h
+ ../include/graphics/Shader.h
  ../include/graphics/Window.h
  ../include/utilities/viewproj.h
  ../lib/glad/include/KHR/khrplatform.h
@@ -239,10 +502,13 @@ CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o
 CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o
  /home/dawid/dev/vcraft/src/graphics/Renderer.cpp
 CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o
+ ../include/Engine.h
  ../include/graphics/Shader.h
+ ../include/graphics/Window.h
  ../include/utilities/viewproj.h
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
+ ../lib/glfw/include/GLFW/glfw3.h
  ../lib/glm/include/glm/common.hpp
  ../lib/glm/include/glm/detail/_fixes.hpp
  ../lib/glm/include/glm/detail/_swizzle.hpp
@@ -395,32 +661,174 @@ CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o
  ../lib/glm/include/glm/vec4.hpp
  ../lib/glm/include/glm/vector_relational.hpp
  /home/dawid/dev/vcraft/src/graphics/Shader.cpp
+CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.o
+ ../include/graphics/Vao.h
+ ../include/graphics/Vbo.h
+ ../lib/glad/include/KHR/khrplatform.h
+ ../lib/glad/include/glad/glad.h
+ /home/dawid/dev/vcraft/src/graphics/Vao.cpp
+CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.o
+ ../include/graphics/Vbo.h
+ ../lib/glad/include/KHR/khrplatform.h
+ ../lib/glad/include/glad/glad.h
+ /home/dawid/dev/vcraft/src/graphics/Vbo.cpp
 CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o
  ../include/Engine.h
+ ../include/graphics/Shader.h
  ../include/graphics/Window.h
+ ../include/utilities/viewproj.h
  ../lib/glad/include/KHR/khrplatform.h
  ../lib/glad/include/glad/glad.h
  ../lib/glfw/include/GLFW/glfw3.h
+ ../lib/glm/include/glm/common.hpp
+ ../lib/glm/include/glm/detail/_fixes.hpp
  ../lib/glm/include/glm/detail/_swizzle.hpp
  ../lib/glm/include/glm/detail/_swizzle_func.hpp
+ ../lib/glm/include/glm/detail/_vectorize.hpp
+ ../lib/glm/include/glm/detail/compute_common.hpp
  ../lib/glm/include/glm/detail/compute_vector_relational.hpp
+ ../lib/glm/include/glm/detail/func_common.inl
+ ../lib/glm/include/glm/detail/func_common_simd.inl
+ ../lib/glm/include/glm/detail/func_exponential.inl
+ ../lib/glm/include/glm/detail/func_exponential_simd.inl
+ ../lib/glm/include/glm/detail/func_geometric.inl
+ ../lib/glm/include/glm/detail/func_geometric_simd.inl
+ ../lib/glm/include/glm/detail/func_integer.inl
+ ../lib/glm/include/glm/detail/func_integer_simd.inl
+ ../lib/glm/include/glm/detail/func_matrix.inl
+ ../lib/glm/include/glm/detail/func_matrix_simd.inl
+ ../lib/glm/include/glm/detail/func_packing.inl
+ ../lib/glm/include/glm/detail/func_packing_simd.inl
+ ../lib/glm/include/glm/detail/func_trigonometric.inl
+ ../lib/glm/include/glm/detail/func_trigonometric_simd.inl
+ ../lib/glm/include/glm/detail/func_vector_relational.inl
+ ../lib/glm/include/glm/detail/func_vector_relational_simd.inl
  ../lib/glm/include/glm/detail/qualifier.hpp
  ../lib/glm/include/glm/detail/setup.hpp
+ ../lib/glm/include/glm/detail/type_half.hpp
+ ../lib/glm/include/glm/detail/type_half.inl
+ ../lib/glm/include/glm/detail/type_mat2x2.hpp
+ ../lib/glm/include/glm/detail/type_mat2x2.inl
+ ../lib/glm/include/glm/detail/type_mat2x3.hpp
+ ../lib/glm/include/glm/detail/type_mat2x3.inl
+ ../lib/glm/include/glm/detail/type_mat2x4.hpp
+ ../lib/glm/include/glm/detail/type_mat2x4.inl
+ ../lib/glm/include/glm/detail/type_mat3x2.hpp
+ ../lib/glm/include/glm/detail/type_mat3x2.inl
+ ../lib/glm/include/glm/detail/type_mat3x3.hpp
+ ../lib/glm/include/glm/detail/type_mat3x3.inl
+ ../lib/glm/include/glm/detail/type_mat3x4.hpp
+ ../lib/glm/include/glm/detail/type_mat3x4.inl
+ ../lib/glm/include/glm/detail/type_mat4x2.hpp
+ ../lib/glm/include/glm/detail/type_mat4x2.inl
+ ../lib/glm/include/glm/detail/type_mat4x3.hpp
+ ../lib/glm/include/glm/detail/type_mat4x3.inl
+ ../lib/glm/include/glm/detail/type_mat4x4.hpp
+ ../lib/glm/include/glm/detail/type_mat4x4.inl
+ ../lib/glm/include/glm/detail/type_mat4x4_simd.inl
+ ../lib/glm/include/glm/detail/type_vec1.hpp
+ ../lib/glm/include/glm/detail/type_vec1.inl
  ../lib/glm/include/glm/detail/type_vec2.hpp
  ../lib/glm/include/glm/detail/type_vec2.inl
+ ../lib/glm/include/glm/detail/type_vec3.hpp
+ ../lib/glm/include/glm/detail/type_vec3.inl
+ ../lib/glm/include/glm/detail/type_vec4.hpp
+ ../lib/glm/include/glm/detail/type_vec4.inl
+ ../lib/glm/include/glm/detail/type_vec4_simd.inl
+ ../lib/glm/include/glm/exponential.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double2x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double3x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x2.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x3.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x4.hpp
+ ../lib/glm/include/glm/ext/matrix_double4x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float2x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float3x4_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x2.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x2_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x3.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x3_precision.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x4.hpp
+ ../lib/glm/include/glm/ext/matrix_float4x4_precision.hpp
  ../lib/glm/include/glm/ext/scalar_int_sized.hpp
  ../lib/glm/include/glm/ext/scalar_uint_sized.hpp
  ../lib/glm/include/glm/ext/vector_bool2.hpp
  ../lib/glm/include/glm/ext/vector_bool2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_bool3.hpp
+ ../lib/glm/include/glm/ext/vector_bool3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_bool4.hpp
+ ../lib/glm/include/glm/ext/vector_bool4_precision.hpp
  ../lib/glm/include/glm/ext/vector_double2.hpp
  ../lib/glm/include/glm/ext/vector_double2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_double3.hpp
+ ../lib/glm/include/glm/ext/vector_double3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_double4.hpp
+ ../lib/glm/include/glm/ext/vector_double4_precision.hpp
  ../lib/glm/include/glm/ext/vector_float2.hpp
  ../lib/glm/include/glm/ext/vector_float2_precision.hpp
+ ../lib/glm/include/glm/ext/vector_float3.hpp
+ ../lib/glm/include/glm/ext/vector_float3_precision.hpp
+ ../lib/glm/include/glm/ext/vector_float4.hpp
+ ../lib/glm/include/glm/ext/vector_float4_precision.hpp
  ../lib/glm/include/glm/ext/vector_int2.hpp
  ../lib/glm/include/glm/ext/vector_int2_sized.hpp
+ ../lib/glm/include/glm/ext/vector_int3.hpp
+ ../lib/glm/include/glm/ext/vector_int3_sized.hpp
+ ../lib/glm/include/glm/ext/vector_int4.hpp
+ ../lib/glm/include/glm/ext/vector_int4_sized.hpp
  ../lib/glm/include/glm/ext/vector_uint2.hpp
  ../lib/glm/include/glm/ext/vector_uint2_sized.hpp
+ ../lib/glm/include/glm/ext/vector_uint3.hpp
+ ../lib/glm/include/glm/ext/vector_uint3_sized.hpp
+ ../lib/glm/include/glm/ext/vector_uint4.hpp
+ ../lib/glm/include/glm/ext/vector_uint4_sized.hpp
+ ../lib/glm/include/glm/fwd.hpp
+ ../lib/glm/include/glm/geometric.hpp
+ ../lib/glm/include/glm/glm.hpp
+ ../lib/glm/include/glm/integer.hpp
+ ../lib/glm/include/glm/mat2x2.hpp
+ ../lib/glm/include/glm/mat2x3.hpp
+ ../lib/glm/include/glm/mat2x4.hpp
+ ../lib/glm/include/glm/mat3x2.hpp
+ ../lib/glm/include/glm/mat3x3.hpp
+ ../lib/glm/include/glm/mat3x4.hpp
+ ../lib/glm/include/glm/mat4x2.hpp
+ ../lib/glm/include/glm/mat4x3.hpp
+ ../lib/glm/include/glm/mat4x4.hpp
+ ../lib/glm/include/glm/matrix.hpp
+ ../lib/glm/include/glm/packing.hpp
+ ../lib/glm/include/glm/simd/common.h
+ ../lib/glm/include/glm/simd/exponential.h
+ ../lib/glm/include/glm/simd/geometric.h
+ ../lib/glm/include/glm/simd/integer.h
+ ../lib/glm/include/glm/simd/matrix.h
  ../lib/glm/include/glm/simd/neon.h
  ../lib/glm/include/glm/simd/platform.h
+ ../lib/glm/include/glm/trigonometric.hpp
  ../lib/glm/include/glm/vec2.hpp
+ ../lib/glm/include/glm/vec3.hpp
+ ../lib/glm/include/glm/vec4.hpp
+ ../lib/glm/include/glm/vector_relational.hpp
  /home/dawid/dev/vcraft/src/graphics/Window.cpp

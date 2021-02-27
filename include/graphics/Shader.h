@@ -19,12 +19,14 @@ namespace vc {
             const GLchar *name;
         };
     public:
-        Shader(char *vsPath, char *fsPath, size_t n, struct VertexAttr attributes[]);
+        Shader();
+        ~Shader();
+        void create(const std::string &vsPath, const std::string &fsPath, size_t n, struct VertexAttr attributes[]);
         [[nodiscard]] GLint getHandle() const;
         [[nodiscard]] GLint getHandle(Type type) const;
     private:
-        static GLuint compile(char *path, Type type);
-        static void checkCompileErrors(GLint shader, char* path, vc::Shader::Type type);
+        static GLuint compile(const std::string &path, Type type);
+        static void checkCompileErrors(GLint shader, const std::string &path, vc::Shader::Type type);
     private:
         GLint handle{}, vsHandle{}, fsHandle{};
     public:
