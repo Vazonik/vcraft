@@ -146,6 +146,6 @@ void vc::Shader::sendInt(const std::string &name, int i) const {
     glUniform1i(glGetUniformLocation(handle, name.c_str()), i);
 }
 
-void vc::Shader::sentUInt(const std::string &name, unsigned int ui) const {
+void vc::Shader::sendUInt(const std::string &name, unsigned int ui) const {
     glUniform1ui(glGetUniformLocation(handle, name.c_str()), ui);
 }

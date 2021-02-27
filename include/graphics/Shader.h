@@ -38,7 +38,7 @@ namespace vc {
         void sendVec3(const std::string &name, glm::vec3 v) const;
         void sendVec4(const std::string &name, glm::vec4 v) const;
         void sendInt(const std::string &name, int i) const;
-        void sentUInt(const std::string &name, unsigned int ui) const;
+        void sendUInt(const std::string &name, unsigned int ui) const;
     };
 }
 
