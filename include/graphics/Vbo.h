@@ -7,14 +7,15 @@
 namespace vc {
     class Vbo {
     public:
-        Vbo(GLint type, bool dynamic);
+        Vbo();
+        void create(GLint type, bool dynamic);
         void destroy();
         void use() const;
         void buffer(void *data, size_t offset, size_t count) const;
     private:
         GLuint handle{};
-        GLint type;
-        bool dynamic;
+        GLint type{};
+        bool dynamic{};
     };
 }
 

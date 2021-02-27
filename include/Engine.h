@@ -1,6 +1,7 @@
 #ifndef VCRAFT_ENGINE_H
 #define VCRAFT_ENGINE_H
-#include "graphics/Shader.h"
+
+#include "graphics/Renderer.h"
 
 namespace vc {
     class Engine {
@@ -12,7 +13,7 @@ namespace vc {
         void render();
         void destroy();
     private:
-        Shader basicColorShader;
+        Renderer renderer;
     };
 }
 

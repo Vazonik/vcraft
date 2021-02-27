@@ -14,12 +14,13 @@ namespace vc {
             orthographic,
             perspective
         };
-    private:
+    public:
         class OrthoCamera {
         public:
             OrthoCamera();
             void init(glm::vec2 min, glm::vec2 max);
             void update();
+            ViewProj getViewProj();
         private:
             ViewProj vp{};
             glm::vec2 position{}, min{}, max{};
@@ -30,6 +31,7 @@ namespace vc {
             PerspCamera();
             void init(float fov);
             void update();
+            ViewProj getViewProj();
         private:
             ViewProj vp{};
             glm::vec3 position{}, direction{}, up{}, right{};

@@ -1,10 +1,11 @@
 
-#include <graphics/Shader.h>
+#include "graphics/Shader.h"
+#include "graphics/Window.h"
+
 #include <cstdio>
 #include <fstream>
 #include <sstream>
 
-#include "graphics/Window.h"
 
 vc::Shader::Shader() = default;
 vc::Shader::~Shader() {
@@ -12,9 +13,7 @@ vc::Shader::~Shader() {
 }
 
 void vc::Shader::create(const std::string &vsPath, const std::string &fsPath, size_t n, vc::Shader::VertexAttr *attributes) {
-    if(!vc::Window::getInstance()->isGladInitialised()) {
-        throw std::runtime_error("[ERROR] Building a shader before glad initialization is not allowed.");
-    }
+    assert(vc::Window::getInstance()->isGladInitialised());
 
     vsHandle = compile(vsPath, Type::vertex);
     fsHandle = compile(fsPath, Type::fragment);

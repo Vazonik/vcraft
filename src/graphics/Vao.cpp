@@ -4,7 +4,9 @@
 
 #include <graphics/Vao.h>
 
-vc::Vao::Vao() {
+vc::Vao::Vao() = default;
+
+void vc::Vao::create() {
     glGenVertexArrays(1, &handle);
 }
 

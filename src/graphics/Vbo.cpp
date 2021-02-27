@@ -4,7 +4,11 @@
 
 #include <graphics/Vbo.h>
 
-vc::Vbo::Vbo(GLint type, bool dynamic) : type(type), dynamic(dynamic) {
+vc::Vbo::Vbo() = default;
+
+void vc::Vbo::create(GLint _type, bool _dynamic)  {
+    this->type = _type;
+    this->dynamic = _dynamic;
     glGenBuffers(1, &handle);
 }
 

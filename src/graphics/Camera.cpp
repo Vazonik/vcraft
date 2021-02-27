@@ -14,12 +14,16 @@ void vc::Camera::OrthoCamera::update() {
     vp.proj = glm::ortho(min.x, max.x, min.y, max.y, -100.0f, 100.0f);
 }
 
+ViewProj vc::Camera::OrthoCamera::getViewProj() {
+    return this->vp;
+}
+
 
 vc::Camera::PerspCamera::PerspCamera() = default;
 
 void vc::Camera::PerspCamera::init(float _fov) {
     fov = _fov;
-    glm::i32vec2 wndSize = vc::Window::getInstance()->getSize();
+    auto wndSize = vc::Window::getInstance()->getSize();
     aspect = static_cast<float>(wndSize.x) / static_cast<float>(wndSize.y);
     znear = 0.01f;
     zfar = 1000.0f;
@@ -42,4 +46,8 @@ void vc::Camera::PerspCamera::update() {
 
     vp.view = glm::lookAt(position, position + direction, up);
     vp.proj = glm::perspective(fov, aspect, znear, zfar);
+}
+
+ViewProj vc::Camera::PerspCamera::getViewProj() {
+    return this->vp;
 }

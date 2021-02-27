@@ -7,6 +7,7 @@ namespace vc {
     class Vao {
     public:
         Vao();
+        void create();
         void destroy();
         void use() const;
         void attr(const vc::Vbo &vbo, GLuint index, GLint size, GLenum type, GLsizei stride, size_t offset) const;
