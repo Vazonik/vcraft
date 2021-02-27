@@ -132,8 +132,10 @@ void vc::Shader::sendMat4(const std::string &name, glm::mat4 m) const {
     glUniformMatrix4fv(glGetUniformLocation(handle, name.c_str()), 1, GL_FALSE, &m[0][0]);
 }
 
-void vc::Shader::sendTexture2D() {
-    // for later
+void vc::Shader::sendTexture2D(const std::string &name, const Texture &texture, GLuint n) const {
+    glActiveTexture(GL_TEXTURE0 + n);
+    texture.use();
+    glUniform1i(glGetUniformLocation(handle, name.c_str()), n);
 }
 
 void vc::Shader::sendFloat(const std::string &name, float f) const {

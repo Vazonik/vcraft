@@ -45,9 +45,6 @@ namespace vc {
         this->_engine->start();
         while (!glfwWindowShouldClose(handler))
         {
-            glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
-
             this->_engine->update();
             this->_engine->render();
 

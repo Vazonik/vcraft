@@ -6,7 +6,7 @@ int main()
 {
 
     auto engine = new vc::Engine();
-    auto window = vc::Window::create(800, 600, "VCraft", engine);
+    auto window = vc::Window::create(1280, 720, "VCraft", engine);
     window->loop();
     window->destroy();
     delete engine;

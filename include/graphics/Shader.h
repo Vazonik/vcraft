@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "utilities/viewproj.h"
+#include "graphics/Texture.h"
 
 namespace vc {
     class Shader {
@@ -34,7 +35,7 @@ namespace vc {
         void destroy() const;
         void sendViewProj(ViewProj vp) const;
         void sendMat4(const std::string &name, glm::mat4 m) const;
-        void sendTexture2D(); /* TODO: Send texture 2D to shader */
+        void sendTexture2D(const std::string &name, const Texture &texture, GLuint n) const;
         void sendFloat(const std::string &name, float f) const;
         void sendVec2(const std::string &name, glm::vec2 v) const;
         void sendVec3(const std::string &name, glm::vec3 v) const;

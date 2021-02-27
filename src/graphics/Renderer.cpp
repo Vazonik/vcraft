@@ -10,14 +10,23 @@ vc::Renderer::Renderer() :
 
 vc::Renderer::~Renderer() = default;
 
-
 void vc::Renderer::create() {
 
     {
         Shader::VertexAttr attr[] = {{ 0, "position" }};
-        shadersArray[ShaderType::basicColor].create("shaders/basic_color.vs", "shaders/basic_color.fs", 1, attr);
+        shadersArray[basicColor].create(
+                "shaders/basic_color.vs", "shaders/basic_color.fs",
+                1, attr);
     }
 
+    {
+        Shader::VertexAttr attr[] = {{ 0, "position" }, { 1, "uv" }};
+        shadersArray[basicTexture].create(
+                "shaders/basic_texture.vs", "shaders/basic_texture.fs",
+                2, attr);
+    }
+
+    texturesArray[crosshair].create("resources/images/crosshair.png");
 
     vao.create();
     vbo.create(GL_ARRAY_BUFFER, true);
@@ -28,6 +37,10 @@ void vc::Renderer::create() {
 }
 
 void vc::Renderer::destroy() {
+    for (size_t i = 0; i <= SHADER_TYPE_LAST; i++) {
+        shadersArray[i].destroy();
+    }
+
     vao.destroy();
     vbo.destroy();
     ibo.destroy();
@@ -97,6 +110,10 @@ void vc::Renderer::useShader(vc::Renderer::ShaderType shaderType) {
     currentShader.use();
 }
 
+vc::Texture vc::Renderer::getTexture(vc::Renderer::Textures enumTexture) const {
+    return this->texturesArray[enumTexture];
+}
+
 void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, const glm::mat4 &model) {
     useShader(basicColor);
     setViewProj();
@@ -123,8 +140,38 @@ void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, cons
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void *)nullptr);
 }
 
-void vc::Renderer::quadTexture() {
-    // for later
+void vc::Renderer::quadTexture(const vc::Texture &texture, const glm::vec2 &size, const glm::vec4 &color,
+                               const glm::vec2 &uvMin, const glm::vec2 &uvMax, const glm::mat4 &model) {
+    useShader(ShaderType::basicTexture);
+    setViewProj();
+    currentShader.sendMat4("m", model);
+    currentShader.sendTexture2D("tex", texture, 0);
+    currentShader.sendVec4("color", color);
+
+    const float vboData[] = {
+            0.0f, 0.0f, 0.0f,
+            0.0f, size.y, 0.0f,
+            size.x, size.y, 0.0f,
+            size.x, 0.0f, 0.0f,
+
+            uvMin.x, uvMin.y,
+            uvMin.x, uvMax.y,
+            uvMax.x, uvMax.y,
+            uvMax.x, uvMin.y
+    };
+
+    const unsigned int iboData[] = {
+            3, 0, 1, 3, 1, 2
+    };
+
+    vbo.buffer((void*)vboData, 0, 20 * sizeof(float));
+    ibo.buffer((void*)iboData, 0, 6 * sizeof(unsigned int));
+    vao.attr(vbo, 0, 3, GL_FLOAT, 0, 0);
+    vao.attr(vbo, 1, 2, GL_FLOAT, 0, 12 * sizeof(float));
+
+    vao.use();
+    vbo.use();
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*)nullptr);
 }
 
 void vc::Renderer::aabb() {

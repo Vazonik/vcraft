@@ -38,6 +38,7 @@
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/stb"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>
@@ -67,6 +68,7 @@
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/stb"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>

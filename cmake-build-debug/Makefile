@@ -377,6 +377,33 @@ src/graphics/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.s
 .PHONY : src/graphics/Shader.cpp.s
 
+src/graphics/Texture.o: src/graphics/Texture.cpp.o
+
+.PHONY : src/graphics/Texture.o
+
+# target to build an object file
+src/graphics/Texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.o
+.PHONY : src/graphics/Texture.cpp.o
+
+src/graphics/Texture.i: src/graphics/Texture.cpp.i
+
+.PHONY : src/graphics/Texture.i
+
+# target to preprocess a source file
+src/graphics/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.i
+.PHONY : src/graphics/Texture.cpp.i
+
+src/graphics/Texture.s: src/graphics/Texture.cpp.s
+
+.PHONY : src/graphics/Texture.s
+
+# target to generate assembly for a file
+src/graphics/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.s
+.PHONY : src/graphics/Texture.cpp.s
+
 src/graphics/Vao.o: src/graphics/Vao.cpp.o
 
 .PHONY : src/graphics/Vao.o
@@ -491,6 +518,9 @@ help:
 	@echo "... src/graphics/Shader.o"
 	@echo "... src/graphics/Shader.i"
 	@echo "... src/graphics/Shader.s"
+	@echo "... src/graphics/Texture.o"
+	@echo "... src/graphics/Texture.i"
+	@echo "... src/graphics/Texture.s"
 	@echo "... src/graphics/Vao.o"
 	@echo "... src/graphics/Vao.i"
 	@echo "... src/graphics/Vao.s"

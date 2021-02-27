@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/dawid/dev/vcraft/include -I/home/dawid/dev/vcraft/lib/glad/include -I/home/dawid/dev/vcraft/lib/glm/include -I/home/dawid/dev/vcraft/lib/glfw/include 
+C_INCLUDES = -I/home/dawid/dev/vcraft/include -I/home/dawid/dev/vcraft/lib/glad/include -I/home/dawid/dev/vcraft/lib/glm/include -I/home/dawid/dev/vcraft/lib/stb -I/home/dawid/dev/vcraft/lib/glfw/include 
 
 CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dawid/dev/vcraft/include -I/home/dawid/dev/vcraft/lib/glad/include -I/home/dawid/dev/vcraft/lib/glm/include -I/home/dawid/dev/vcraft/lib/glfw/include 
+CXX_INCLUDES = -I/home/dawid/dev/vcraft/include -I/home/dawid/dev/vcraft/lib/glad/include -I/home/dawid/dev/vcraft/lib/glm/include -I/home/dawid/dev/vcraft/lib/stb -I/home/dawid/dev/vcraft/lib/glfw/include 
 

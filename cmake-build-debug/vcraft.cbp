@@ -57,6 +57,7 @@
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/stb"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
@@ -83,6 +84,7 @@
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/stb"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
@@ -150,6 +152,7 @@
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/stb"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>
@@ -179,6 +182,7 @@
 					<Add directory="/home/dawid/dev/vcraft/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glad/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glm/include"/>
+					<Add directory="/home/dawid/dev/vcraft/lib/stb"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/include"/>
 					<Add directory="/home/dawid/dev/vcraft/lib/glfw/src"/>
 					<Add directory="/home/dawid/dev/vcraft/cmake-build-debug/lib/glfw/src"/>
@@ -211,6 +215,9 @@
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Shader.h">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Texture.h">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Vao.h">
@@ -328,6 +335,9 @@
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Shader.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Texture.cpp">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Vao.cpp">

@@ -29,6 +29,8 @@ graphics/Vao.h
 ../include/graphics/graphics/Vao.h
 graphics/Shader.h
 ../include/graphics/graphics/Shader.h
+graphics/Texture.h
+../include/graphics/graphics/Texture.h
 
 ../include/graphics/Shader.h
 glad/glad.h
@@ -37,6 +39,16 @@ iostream
 -
 utilities/viewproj.h
 ../include/graphics/utilities/viewproj.h
+graphics/Texture.h
+../include/graphics/graphics/Texture.h
+
+../include/graphics/Texture.h
+glad/glad.h
+-
+glm/glm.hpp
+-
+string
+-
 
 ../include/graphics/Vao.h
 graphics/Vbo.h
@@ -1223,16 +1235,4 @@ graphics/Renderer.h
 /home/dawid/dev/vcraft/src/graphics/graphics/Renderer.h
 graphics/Window.h
 /home/dawid/dev/vcraft/src/graphics/graphics/Window.h
-
-/home/dawid/dev/vcraft/src/graphics/Shader.cpp
-graphics/Shader.h
-/home/dawid/dev/vcraft/src/graphics/graphics/Shader.h
-graphics/Window.h
-/home/dawid/dev/vcraft/src/graphics/graphics/Window.h
-cstdio
--
-fstream
--
-sstream
--
 

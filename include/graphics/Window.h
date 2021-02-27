@@ -23,7 +23,7 @@ namespace vc
         void destroy();
         GLFWwindow *getHandler();
         glm::i32vec2 getSize();
-        bool isGladInitialised() const;
+        [[nodiscard]] bool isGladInitialised() const;
     private:
         Engine *_engine{};
         GLFWwindow *handler{};

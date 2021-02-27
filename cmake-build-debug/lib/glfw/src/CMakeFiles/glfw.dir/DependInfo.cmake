@@ -33,6 +33,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   "../lib/glad/include"
   "../lib/glm/include"
+  "../lib/stb"
   "../lib/glfw/include"
   "../lib/glfw/src"
   "lib/glfw/src"
