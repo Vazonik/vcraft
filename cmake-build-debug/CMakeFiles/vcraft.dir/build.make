@@ -129,12 +129,54 @@ CMakeFiles/vcraft.dir/src/Engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/Engine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/Engine.cpp -o CMakeFiles/vcraft.dir/src/Engine.cpp.s
 
+CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o: CMakeFiles/vcraft.dir/flags.make
+CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o: ../src/graphics/Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o -c /home/dawid/dev/vcraft/src/graphics/Renderer.cpp
+
+CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/dev/vcraft/src/graphics/Renderer.cpp > CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.i
+
+CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/graphics/Renderer.cpp -o CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.s
+
+CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o: CMakeFiles/vcraft.dir/flags.make
+CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o: ../src/graphics/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o -c /home/dawid/dev/vcraft/src/graphics/Camera.cpp
+
+CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/dev/vcraft/src/graphics/Camera.cpp > CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.i
+
+CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/graphics/Camera.cpp -o CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.s
+
+CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o: CMakeFiles/vcraft.dir/flags.make
+CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o: ../src/graphics/Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o -c /home/dawid/dev/vcraft/src/graphics/Shader.cpp
+
+CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dawid/dev/vcraft/src/graphics/Shader.cpp > CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.i
+
+CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dawid/dev/vcraft/src/graphics/Shader.cpp -o CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.s
+
 # Object files for target vcraft
 vcraft_OBJECTS = \
 "CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o" \
 "CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o" \
 "CMakeFiles/vcraft.dir/src/Main.cpp.o" \
-"CMakeFiles/vcraft.dir/src/Engine.cpp.o"
+"CMakeFiles/vcraft.dir/src/Engine.cpp.o" \
+"CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o" \
+"CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o" \
+"CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
 
 # External object files for target vcraft
 vcraft_EXTERNAL_OBJECTS =
@@ -143,12 +185,15 @@ vcraft_EXTERNAL_OBJECTS =
 ../build/vcraft: CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o
 ../build/vcraft: CMakeFiles/vcraft.dir/src/Main.cpp.o
 ../build/vcraft: CMakeFiles/vcraft.dir/src/Engine.cpp.o
+../build/vcraft: CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o
+../build/vcraft: CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o
+../build/vcraft: CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o
 ../build/vcraft: CMakeFiles/vcraft.dir/build.make
 ../build/vcraft: lib/glfw/src/libglfw3.a
 ../build/vcraft: /usr/lib/x86_64-linux-gnu/librt.so
 ../build/vcraft: /usr/lib/x86_64-linux-gnu/libm.so
 ../build/vcraft: CMakeFiles/vcraft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../build/vcraft"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../build/vcraft"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vcraft.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

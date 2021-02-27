@@ -3,58 +3,52 @@
 #include <iostream>
 
 namespace vc {
-    int Window::_width = 0;
-    int Window::_height = 0;
-    GLFWwindow *Window::handler = nullptr;
-    FWindow Window::initCallback = nullptr;
-    FWindow Window::startCallback = nullptr;
-    FWindow Window::frameCallback = nullptr;
-    FWindow Window::destroyCallback = nullptr;
+    Window *Window::instance = nullptr;
+    Window::Window() = default;
 
+    Window *Window::create(int width, int height, const char *title, Engine *engine) {
+        instance = new Window();
 
-    void Window::init(FWindow init, FWindow start, FWindow frame, FWindow destroy) {
-        Window::initCallback = init;
-        Window::startCallback = start;
-        Window::frameCallback = frame;
-        Window::destroyCallback = destroy;
-    }
+        instance->size = { width, height };
+        instance->_engine = engine;
 
-    void Window::create(int width, int height, const char *title) {
-        Window::initCallback();
+        engine->init();
 
         glfwInit();
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        Window::_width = width;
-        Window::_height = height;
-
-        handler = glfwCreateWindow(width, height, title, nullptr, nullptr);
-        if (handler == nullptr)
+        instance->handler = glfwCreateWindow(width, height, title, nullptr, nullptr);
+        if (instance->handler == nullptr)
         {
             std::cout << "Failed to create GLFW window" << std::endl;
-            Window::destroy();
+            instance->destroy();
+            return nullptr;
         }
-        glfwMakeContextCurrent(handler);
+        glfwMakeContextCurrent(instance->handler);
 
-        glfwSetFramebufferSizeCallback(handler, Window::framebufferSizeCallback);
+        glfwSetFramebufferSizeCallback(instance->handler, Window::framebufferSizeCallback);
 
         if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
         {
             std::cout << "Failed to initialize GLAD" << std::endl;
-            Window::destroy();
+            instance->destroy();
+            return nullptr;
         }
+
+        return instance;
     }
 
     void Window::loop() {
-        Window::startCallback();
+        this->_engine->start();
         while (!glfwWindowShouldClose(handler))
         {
             glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            Window::frameCallback();
+            this->_engine->update();
+            this->_engine->render();
 
             glfwSwapBuffers(handler);
             glfwPollEvents();
@@ -62,8 +56,9 @@ namespace vc {
     }
 
     void Window::destroy() {
-        Window::destroyCallback();
+        this->_engine->destroy();
         glfwTerminate();
+        delete instance;
     }
 
 
@@ -73,15 +68,18 @@ namespace vc {
     }
 
     glm::i32vec2 Window::getSize() {
-        return glm::i32vec2(Window::_width, Window::_height);
+        return size;
     }
 
 
     // static
     void Window::framebufferSizeCallback(GLFWwindow *windowHandler, int width, int height) {
-        Window::_width = width;
-        Window::_height = height;
+        getInstance()->size = { width, height };
         glViewport(0, 0, width, height);
+    }
+
+    Window *Window::getInstance() {
+        return instance;
     }
 }
 

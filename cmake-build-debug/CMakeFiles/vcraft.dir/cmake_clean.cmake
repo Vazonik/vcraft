@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/vcraft.dir/lib/glad/src/glad.c.o"
   "CMakeFiles/vcraft.dir/src/Engine.cpp.o"
   "CMakeFiles/vcraft.dir/src/Main.cpp.o"
+  "CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o"
+  "CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o"
+  "CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o"
 )
 

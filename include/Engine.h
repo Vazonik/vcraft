@@ -4,11 +4,12 @@
 namespace vc {
     class Engine {
     public:
-        Engine() = delete;
-        static void init();
-        static void start();
-        static void frame();
-        static void destroy();
+        Engine();
+        void init();
+        void start();
+        void update();
+        void render();
+        void destroy();
     };
 }
 

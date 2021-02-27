@@ -296,6 +296,87 @@ src/Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
+src/graphics/Camera.o: src/graphics/Camera.cpp.o
+
+.PHONY : src/graphics/Camera.o
+
+# target to build an object file
+src/graphics/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o
+.PHONY : src/graphics/Camera.cpp.o
+
+src/graphics/Camera.i: src/graphics/Camera.cpp.i
+
+.PHONY : src/graphics/Camera.i
+
+# target to preprocess a source file
+src/graphics/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.cpp.i
+
+src/graphics/Camera.s: src/graphics/Camera.cpp.s
+
+.PHONY : src/graphics/Camera.s
+
+# target to generate assembly for a file
+src/graphics/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.cpp.s
+
+src/graphics/Renderer.o: src/graphics/Renderer.cpp.o
+
+.PHONY : src/graphics/Renderer.o
+
+# target to build an object file
+src/graphics/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o
+.PHONY : src/graphics/Renderer.cpp.o
+
+src/graphics/Renderer.i: src/graphics/Renderer.cpp.i
+
+.PHONY : src/graphics/Renderer.i
+
+# target to preprocess a source file
+src/graphics/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.i
+.PHONY : src/graphics/Renderer.cpp.i
+
+src/graphics/Renderer.s: src/graphics/Renderer.cpp.s
+
+.PHONY : src/graphics/Renderer.s
+
+# target to generate assembly for a file
+src/graphics/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.s
+.PHONY : src/graphics/Renderer.cpp.s
+
+src/graphics/Shader.o: src/graphics/Shader.cpp.o
+
+.PHONY : src/graphics/Shader.o
+
+# target to build an object file
+src/graphics/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o
+.PHONY : src/graphics/Shader.cpp.o
+
+src/graphics/Shader.i: src/graphics/Shader.cpp.i
+
+.PHONY : src/graphics/Shader.i
+
+# target to preprocess a source file
+src/graphics/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.cpp.i
+
+src/graphics/Shader.s: src/graphics/Shader.cpp.s
+
+.PHONY : src/graphics/Shader.s
+
+# target to generate assembly for a file
+src/graphics/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.cpp.s
+
 src/graphics/Window.o: src/graphics/Window.cpp.o
 
 .PHONY : src/graphics/Window.o
@@ -347,6 +428,15 @@ help:
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
+	@echo "... src/graphics/Camera.o"
+	@echo "... src/graphics/Camera.i"
+	@echo "... src/graphics/Camera.s"
+	@echo "... src/graphics/Renderer.o"
+	@echo "... src/graphics/Renderer.i"
+	@echo "... src/graphics/Renderer.s"
+	@echo "... src/graphics/Shader.o"
+	@echo "... src/graphics/Shader.i"
+	@echo "... src/graphics/Shader.s"
 	@echo "... src/graphics/Window.o"
 	@echo "... src/graphics/Window.i"
 	@echo "... src/graphics/Window.s"

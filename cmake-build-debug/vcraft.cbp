@@ -204,7 +204,19 @@
 		<Unit filename="/home/dawid/dev/vcraft/include/Engine.h">
 			<Option target="vcraft"/>
 		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Camera.h">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Renderer.h">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Shader.h">
+			<Option target="vcraft"/>
+		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Window.h">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/utilities/viewproj.h">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/lib/glad/include/glad/glad.h">
@@ -301,6 +313,15 @@
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/Main.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Camera.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Renderer.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Shader.cpp">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Window.cpp">

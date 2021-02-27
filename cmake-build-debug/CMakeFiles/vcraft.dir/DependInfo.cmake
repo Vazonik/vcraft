@@ -19,6 +19,9 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/dev/vcraft/src/Engine.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/Engine.cpp.o"
   "/home/dawid/dev/vcraft/src/Main.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/Main.cpp.o"
+  "/home/dawid/dev/vcraft/src/graphics/Camera.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o"
+  "/home/dawid/dev/vcraft/src/graphics/Renderer.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o"
+  "/home/dawid/dev/vcraft/src/graphics/Shader.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Window.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

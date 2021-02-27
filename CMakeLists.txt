@@ -4,7 +4,9 @@ project(vcraft)
 set(CMAKE_CXX_STANDARD 17)
 
 set(EXECUTABLE_FILES lib/glad/include/glad/glad.h src/graphics/Window.cpp include/graphics/Window.h
-        lib/glad/src/glad.c src/Main.cpp src/graphics/Window.cpp src/Engine.cpp include/Engine.h)
+        lib/glad/src/glad.c src/Main.cpp src/graphics/Window.cpp src/Engine.cpp include/Engine.h
+        include/graphics/Renderer.h src/graphics/Renderer.cpp include/graphics/Camera.h src/graphics/Camera.cpp
+        include/graphics/Shader.h src/graphics/Shader.cpp include/utilities/viewproj.h)
 
 set(dir ${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/build)

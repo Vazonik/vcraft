@@ -1,12 +1,16 @@
 #include "graphics/Window.h"
-#include "Engine.h"
+
+#include <iostream>
 
 int main()
 {
-    vc::Window::init(vc::Engine::init, vc::Engine::start, vc::Engine::frame, vc::Engine::destroy);
-    vc::Window::create(800, 600, "VCraft");
-    vc::Window::loop();
-    vc::Window::destroy();
+
+    auto engine = new vc::Engine();
+    auto window = vc::Window::create(800, 600, "VCraft", engine);
+    window->loop();
+    window->destroy();
+    delete engine;
+
     return 0;
 }
 
