@@ -25,6 +25,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/dev/vcraft/src/graphics/Shader.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/ShadersBuffer.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/ShadersBuffer.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Texture.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.o"
+  "/home/dawid/dev/vcraft/src/graphics/TexturesBuffer.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/TexturesBuffer.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Vao.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Vbo.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Window.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Window.cpp.o"

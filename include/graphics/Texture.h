@@ -9,6 +9,7 @@ namespace vc {
     class Texture {
     public:
         Texture();
+        ~Texture();
         static void loadPixels(const std::string &path, uint8_t **pixelsOut, size_t *widthOut, size_t *heightOut);
         void create(uint8_t *pixels, size_t width, size_t height);
         void create(const std::string &path);

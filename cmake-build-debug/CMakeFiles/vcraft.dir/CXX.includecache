@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/graphics/Shader.h
-glad/glad.h
--
-iostream
--
-utilities/viewproj.h
-../include/graphics/utilities/viewproj.h
-graphics/Texture.h
-../include/graphics/graphics/Texture.h
-
-../include/graphics/ShadersBuffer.h
-graphics/Shader.h
-../include/graphics/graphics/Shader.h
-
 ../include/graphics/Texture.h
 glad/glad.h
 -
@@ -28,9 +14,9 @@ glm/glm.hpp
 string
 -
 
-../include/utilities/viewproj.h
-glm/glm.hpp
--
+../include/graphics/TexturesBuffer.h
+graphics/Texture.h
+../include/graphics/graphics/Texture.h
 
 ../lib/glad/include/KHR/khrplatform.h
 stdint.h
@@ -1052,7 +1038,7 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 ../lib/glm/include/glm/detail/func_vector_relational.inl
 
-/home/dawid/dev/vcraft/src/graphics/ShadersBuffer.cpp
-graphics/ShadersBuffer.h
-/home/dawid/dev/vcraft/src/graphics/graphics/ShadersBuffer.h
+/home/dawid/dev/vcraft/src/graphics/TexturesBuffer.cpp
+graphics/TexturesBuffer.h
+-
 

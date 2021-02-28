@@ -431,6 +431,33 @@ src/graphics/Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.s
 .PHONY : src/graphics/Texture.cpp.s
 
+src/graphics/TexturesBuffer.o: src/graphics/TexturesBuffer.cpp.o
+
+.PHONY : src/graphics/TexturesBuffer.o
+
+# target to build an object file
+src/graphics/TexturesBuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/TexturesBuffer.cpp.o
+.PHONY : src/graphics/TexturesBuffer.cpp.o
+
+src/graphics/TexturesBuffer.i: src/graphics/TexturesBuffer.cpp.i
+
+.PHONY : src/graphics/TexturesBuffer.i
+
+# target to preprocess a source file
+src/graphics/TexturesBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/TexturesBuffer.cpp.i
+.PHONY : src/graphics/TexturesBuffer.cpp.i
+
+src/graphics/TexturesBuffer.s: src/graphics/TexturesBuffer.cpp.s
+
+.PHONY : src/graphics/TexturesBuffer.s
+
+# target to generate assembly for a file
+src/graphics/TexturesBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vcraft.dir/build.make CMakeFiles/vcraft.dir/src/graphics/TexturesBuffer.cpp.s
+.PHONY : src/graphics/TexturesBuffer.cpp.s
+
 src/graphics/Vao.o: src/graphics/Vao.cpp.o
 
 .PHONY : src/graphics/Vao.o
@@ -551,6 +578,9 @@ help:
 	@echo "... src/graphics/Texture.o"
 	@echo "... src/graphics/Texture.i"
 	@echo "... src/graphics/Texture.s"
+	@echo "... src/graphics/TexturesBuffer.o"
+	@echo "... src/graphics/TexturesBuffer.i"
+	@echo "... src/graphics/TexturesBuffer.s"
 	@echo "... src/graphics/Vao.o"
 	@echo "... src/graphics/Vao.i"
 	@echo "... src/graphics/Vao.s"

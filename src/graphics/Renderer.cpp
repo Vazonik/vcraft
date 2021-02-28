@@ -13,7 +13,7 @@ vc::Renderer::~Renderer() = default;
 
 void vc::Renderer::create() {
     shaders.createShaders();
-    texturesArray[crosshair].create("resources/images/crosshair.png");
+    textures.createTextures();
 
     vao.create();
     vbo.create(GL_ARRAY_BUFFER, true);
@@ -25,6 +25,7 @@ void vc::Renderer::create() {
 
 void vc::Renderer::destroy() {
     shaders.destroyShaders();
+    textures.destroyTextures();
     vao.destroy();
     vbo.destroy();
     ibo.destroy();
@@ -93,8 +94,8 @@ void vc::Renderer::useShader(vc::Shader *pShader) {
     shader->use();
 }
 
-vc::Texture vc::Renderer::getTexture(vc::Renderer::Textures enumTexture) const {
-    return this->texturesArray[enumTexture];
+vc::Texture *vc::Renderer::getTexture(vc::Textures textureEnum) {
+    return textures.getTexture(textureEnum);
 }
 
 void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, const glm::mat4 &model) {
@@ -123,7 +124,7 @@ void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, cons
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void *)nullptr);
 }
 
-void vc::Renderer::quadTexture(const vc::Texture &texture, const glm::vec2 &size, const glm::vec4 &color,
+void vc::Renderer::quadTexture(const vc::Texture *texture, const glm::vec2 &size, const glm::vec4 &color,
                                const glm::vec2 &uvMin, const glm::vec2 &uvMax, const glm::mat4 &model) {
     useShader(shaders.getBasicTextureShader());
     setViewProj();

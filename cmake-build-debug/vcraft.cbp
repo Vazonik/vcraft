@@ -223,6 +223,9 @@
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Texture.h">
 			<Option target="vcraft"/>
 		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/TexturesBuffer.h">
+			<Option target="vcraft"/>
+		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Vao.h">
 			<Option target="vcraft"/>
 		</Unit>
@@ -344,6 +347,9 @@
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Texture.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/TexturesBuffer.cpp">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Vao.cpp">

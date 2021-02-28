@@ -7,7 +7,7 @@
 #include "graphics/Vbo.h"
 #include "graphics/Vao.h"
 #include "graphics/ShadersBuffer.h"
-#include "graphics/Texture.h"
+#include "graphics/TexturesBuffer.h"
 
 #define SHADER_TYPE_LAST vc::Renderer::ShaderType::basicTexture
 #define TEXTURES_LAST vc::Renderer::Textures::crosshair
@@ -18,9 +18,6 @@ namespace vc {
         enum Pass {
             pass2D,
             pass3D
-        };
-        enum Textures {
-            crosshair
         };
     private:
         struct CameraStack {
@@ -39,9 +36,9 @@ namespace vc {
         void popCamera();
         void setViewProj();
         void useShader(Shader* pShader);
-        [[nodiscard]] Texture getTexture(Textures enumTexture) const;
+        Texture *getTexture(vc::Textures textureEnum);
         void quadColor(const glm::vec2 &size, const glm::vec4 &color, const glm::mat4 &model);
-        void quadTexture(const Texture &texture, const glm::vec2 &size, const glm::vec4 &color,
+        void quadTexture(const Texture *texture, const glm::vec2 &size, const glm::vec4 &color,
                          const glm::vec2 &uvMin, const glm::vec2 &uvMax, const glm::mat4 &model);
         void aabb(); /* TODO: aabb */
     public:
@@ -55,7 +52,7 @@ namespace vc {
         Vao vao;
         ShadersBuffer shaders;
         Shader *shader;
-        Texture texturesArray[TEXTURES_LAST + 1];
+        TexturesBuffer textures;
     };
 }
 

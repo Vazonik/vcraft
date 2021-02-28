@@ -8,7 +8,7 @@ set(EXECUTABLE_FILES lib/glad/include/glad/glad.h src/graphics/Window.cpp includ
         include/graphics/Renderer.h src/graphics/Renderer.cpp include/graphics/Camera.h src/graphics/Camera.cpp
         include/graphics/Shader.h src/graphics/Shader.cpp include/utilities/viewproj.h include/graphics/Vao.h
         include/graphics/Vbo.h src/graphics/Vao.cpp src/graphics/Vbo.cpp include/graphics/Texture.h
-        src/graphics/Texture.cpp include/graphics/ShadersBuffer.h src/graphics/ShadersBuffer.cpp)
+        src/graphics/Texture.cpp include/graphics/ShadersBuffer.h src/graphics/ShadersBuffer.cpp include/graphics/TexturesBuffer.h src/graphics/TexturesBuffer.cpp)
 
 set(dir ${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir}/build)

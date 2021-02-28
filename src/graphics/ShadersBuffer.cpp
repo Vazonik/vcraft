@@ -5,10 +5,6 @@ vc::ShadersBuffer::ShadersBuffer() {
     basicTextureShader = new Shader();
 }
 
-vc::ShadersBuffer::~ShadersBuffer() {
-    this->destroyShaders();
-}
-
 void vc::ShadersBuffer::createShaders() {
     Shader::VertexAttr basicColorAttr[] = {
             { 0, "position" }
@@ -27,6 +23,9 @@ void vc::ShadersBuffer::destroyShaders() {
     delete basicColorShader;
 }
 
+vc::ShadersBuffer::~ShadersBuffer() {
+    this->destroyShaders();
+}
 
 /// GETTERS ///
 vc::Shader *vc::ShadersBuffer::getBasicColorShader() const {

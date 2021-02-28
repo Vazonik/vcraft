@@ -50,3 +50,7 @@ void vc::Texture::destroy() {
 void vc::Texture::use() const {
     glBindTexture(GL_TEXTURE_2D, handle);
 }
+
+vc::Texture::~Texture() {
+    this->destroy();
+}

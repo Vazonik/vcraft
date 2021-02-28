@@ -38,7 +38,7 @@ void vc::Engine::render() {
     glm::mat4 m = glm::translate(glm::vec3((wndSize.x / 2) - 8, (wndSize.y / 2) - 8, 0));
     //renderer.quadColor({16.0f, 16.0f }, {1.0f, 1.0f, 1.0f, 1.0f}, m);
     renderer.quadTexture(
-            renderer.getTexture(Renderer::crosshair),
+            renderer.getTexture(vc::Textures::crosshair),
             { 16.0f, 16.0f }, { 1.0f, 1.0f, 1.0f, 0.4f },
             { 0.0f, 0.0f }, { 1.0f, 1.0f }, m);
 
