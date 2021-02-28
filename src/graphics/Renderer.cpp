@@ -99,7 +99,7 @@ vc::Texture *vc::Renderer::getTexture(vc::Textures textureEnum) {
 }
 
 void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, const glm::mat4 &model) {
-    useShader(shaders.getBasicColorShader());
+    useShader(shaders.getShader(vc::Shaders::basicColor));
     setViewProj();
     shader->sendMat4("m", model);
     shader->sendVec4("color", color);
@@ -126,7 +126,7 @@ void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, cons
 
 void vc::Renderer::quadTexture(const vc::Texture *texture, const glm::vec2 &size, const glm::vec4 &color,
                                const glm::vec2 &uvMin, const glm::vec2 &uvMax, const glm::mat4 &model) {
-    useShader(shaders.getBasicTextureShader());
+    useShader(shaders.getShader(vc::Shaders::basicTexture));
     setViewProj();
     shader->sendMat4("m", model);
     shader->sendTexture2D("tex", texture, 0);

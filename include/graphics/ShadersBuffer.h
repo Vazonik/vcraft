@@ -4,19 +4,21 @@
 #include "graphics/Shader.h"
 
 namespace vc {
+    enum Shaders {
+        basicColor,
+        basicTexture
+    };
+
     class ShadersBuffer {
     public:
         ShadersBuffer();
         ~ShadersBuffer();
-    public:
-        // SHADERS GETTERS
-        [[nodiscard]] Shader *getBasicColorShader() const;
-        [[nodiscard]] Shader *getBasicTextureShader() const;
     private:
         // SHADERS DECLARATIONS
         Shader *basicColorShader;
         Shader *basicTextureShader;
     public:
+        [[nodiscard]] Shader *getShader(Shaders shaderEnum) const;
         void createShaders();
         void destroyShaders();
     };

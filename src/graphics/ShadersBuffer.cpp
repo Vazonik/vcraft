@@ -18,6 +18,17 @@ void vc::ShadersBuffer::createShaders() {
     basicTextureShader->create("shaders/basic_texture.vs", "shaders/basic_texture.fs", 2, basicTextureAttr);
 }
 
+vc::Shader *vc::ShadersBuffer::getShader(vc::Shaders shaderEnum) const {
+    switch(shaderEnum) {
+        case basicColor:
+            return basicColorShader;
+        case basicTexture:
+            return basicTextureShader;
+        default:
+            return nullptr;
+    }
+}
+
 void vc::ShadersBuffer::destroyShaders() {
     delete basicTextureShader;
     delete basicColorShader;
@@ -25,13 +36,4 @@ void vc::ShadersBuffer::destroyShaders() {
 
 vc::ShadersBuffer::~ShadersBuffer() {
     this->destroyShaders();
-}
-
-/// GETTERS ///
-vc::Shader *vc::ShadersBuffer::getBasicColorShader() const {
-    return basicColorShader;
-}
-
-vc::Shader *vc::ShadersBuffer::getBasicTextureShader() const {
-    return basicTextureShader;
 }
