@@ -1,4 +1,3 @@
-
 #include "graphics/Shader.h"
 #include "graphics/Window.h"
 

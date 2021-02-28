@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
+  "CMakeFiles/vcraft.dir/src/graphics/ShadersBuffer.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.o"
   "CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.o"

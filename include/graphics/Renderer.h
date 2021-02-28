@@ -6,7 +6,7 @@
 #include "graphics/Camera.h"
 #include "graphics/Vbo.h"
 #include "graphics/Vao.h"
-#include "graphics/Shader.h"
+#include "graphics/ShadersBuffer.h"
 #include "graphics/Texture.h"
 
 #define SHADER_TYPE_LAST vc::Renderer::ShaderType::basicTexture
@@ -18,11 +18,6 @@ namespace vc {
         enum Pass {
             pass2D,
             pass3D
-        };
-        enum ShaderType {
-            none = 0,
-            basicColor,
-            basicTexture
         };
         enum Textures {
             crosshair
@@ -43,8 +38,8 @@ namespace vc {
         void pushCamera();
         void popCamera();
         void setViewProj();
-        void useShader(ShaderType shaderType);
-        Texture getTexture(Textures enumTexture) const;
+        void useShader(Shader* pShader);
+        [[nodiscard]] Texture getTexture(Textures enumTexture) const;
         void quadColor(const glm::vec2 &size, const glm::vec4 &color, const glm::mat4 &model);
         void quadTexture(const Texture &texture, const glm::vec2 &size, const glm::vec4 &color,
                          const glm::vec2 &uvMin, const glm::vec2 &uvMax, const glm::mat4 &model);
@@ -58,9 +53,8 @@ namespace vc {
         CameraStack cameraStack;
         Vbo vbo, ibo;
         Vao vao;
-        Shader shadersArray[SHADER_TYPE_LAST + 1];
-        ShaderType currentShaderType;
-        Shader currentShader;
+        ShadersBuffer shaders;
+        Shader *shader;
         Texture texturesArray[TEXTURES_LAST + 1];
     };
 }

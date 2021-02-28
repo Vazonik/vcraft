@@ -217,6 +217,9 @@
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Shader.h">
 			<Option target="vcraft"/>
 		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/include/graphics/ShadersBuffer.h">
+			<Option target="vcraft"/>
+		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/include/graphics/Texture.h">
 			<Option target="vcraft"/>
 		</Unit>
@@ -335,6 +338,9 @@
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Shader.cpp">
+			<Option target="vcraft"/>
+		</Unit>
+		<Unit filename="/home/dawid/dev/vcraft/src/graphics/ShadersBuffer.cpp">
 			<Option target="vcraft"/>
 		</Unit>
 		<Unit filename="/home/dawid/dev/vcraft/src/graphics/Texture.cpp">

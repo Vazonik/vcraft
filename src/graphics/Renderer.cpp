@@ -5,27 +5,14 @@
 vc::Renderer::Renderer() :
     cameraType(vc::Camera::Type::perspective),
     clearColor(0.0f, 0.0f, 0.0f, 1.0f),
-    currentShaderType(ShaderType::none),
-    cameraStack() {}
+    shader(nullptr),
+    cameraStack(),
+    shaders() {}
 
 vc::Renderer::~Renderer() = default;
 
 void vc::Renderer::create() {
-
-    {
-        Shader::VertexAttr attr[] = {{ 0, "position" }};
-        shadersArray[basicColor].create(
-                "shaders/basic_color.vs", "shaders/basic_color.fs",
-                1, attr);
-    }
-
-    {
-        Shader::VertexAttr attr[] = {{ 0, "position" }, { 1, "uv" }};
-        shadersArray[basicTexture].create(
-                "shaders/basic_texture.vs", "shaders/basic_texture.fs",
-                2, attr);
-    }
-
+    shaders.createShaders();
     texturesArray[crosshair].create("resources/images/crosshair.png");
 
     vao.create();
@@ -37,10 +24,7 @@ void vc::Renderer::create() {
 }
 
 void vc::Renderer::destroy() {
-    for (size_t i = 0; i <= SHADER_TYPE_LAST; i++) {
-        shadersArray[i].destroy();
-    }
-
+    shaders.destroyShaders();
     vao.destroy();
     vbo.destroy();
     ibo.destroy();
@@ -92,22 +76,21 @@ void vc::Renderer::popCamera() {
 void vc::Renderer::setViewProj() {
     switch(cameraType) {
         case Camera::Type::perspective:
-            currentShader.sendViewProj(perspectiveCamera.getViewProj());
+            shader->sendViewProj(perspectiveCamera.getViewProj());
             break;
         case Camera::Type::orthographic:
-            currentShader.sendViewProj(orthographicCamera.getViewProj());
+            shader->sendViewProj(orthographicCamera.getViewProj());
             break;
     }
 }
 
-void vc::Renderer::useShader(vc::Renderer::ShaderType shaderType) {
-    if(shaderType == currentShaderType) {
+void vc::Renderer::useShader(vc::Shader *pShader) {
+    if(shader == pShader) {
         return;
     }
 
-    currentShaderType = shaderType;
-    currentShader = shadersArray[shaderType];
-    currentShader.use();
+    shader = pShader;
+    shader->use();
 }
 
 vc::Texture vc::Renderer::getTexture(vc::Renderer::Textures enumTexture) const {
@@ -115,10 +98,10 @@ vc::Texture vc::Renderer::getTexture(vc::Renderer::Textures enumTexture) const {
 }
 
 void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, const glm::mat4 &model) {
-    useShader(basicColor);
+    useShader(shaders.getBasicColorShader());
     setViewProj();
-    currentShader.sendMat4("m", model);
-    currentShader.sendVec4("color", color);
+    shader->sendMat4("m", model);
+    shader->sendVec4("color", color);
 
     const float vboData[] = {
             0.0f, 0.0f, 0.0f,
@@ -142,11 +125,11 @@ void vc::Renderer::quadColor(const glm::vec2 &size, const glm::vec4 &color, cons
 
 void vc::Renderer::quadTexture(const vc::Texture &texture, const glm::vec2 &size, const glm::vec4 &color,
                                const glm::vec2 &uvMin, const glm::vec2 &uvMax, const glm::mat4 &model) {
-    useShader(ShaderType::basicTexture);
+    useShader(shaders.getBasicTextureShader());
     setViewProj();
-    currentShader.sendMat4("m", model);
-    currentShader.sendTexture2D("tex", texture, 0);
-    currentShader.sendVec4("color", color);
+    shader->sendMat4("m", model);
+    shader->sendTexture2D("tex", texture, 0);
+    shader->sendVec4("color", color);
 
     const float vboData[] = {
             0.0f, 0.0f, 0.0f,

@@ -23,6 +23,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dawid/dev/vcraft/src/graphics/Camera.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Camera.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Renderer.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Renderer.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Shader.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Shader.cpp.o"
+  "/home/dawid/dev/vcraft/src/graphics/ShadersBuffer.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/ShadersBuffer.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Texture.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Texture.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Vao.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Vao.cpp.o"
   "/home/dawid/dev/vcraft/src/graphics/Vbo.cpp" "/home/dawid/dev/vcraft/cmake-build-debug/CMakeFiles/vcraft.dir/src/graphics/Vbo.cpp.o"
